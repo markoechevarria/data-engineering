@@ -22,6 +22,7 @@ git config --global user.email myName@email.com
 * To let git know what we want to track a file we need to use `git add`
 
 
+
 ```
 git init
 git status
