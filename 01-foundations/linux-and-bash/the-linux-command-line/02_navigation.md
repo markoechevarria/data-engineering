@@ -1,4 +1,4 @@
-# Navigation
+# 2. Navigation
 
 * Linux organizes its files in what is called a *hierarchical directory structure*, they are organized in a tree-like pattern of directories
 * At any given time, we are inside a single directory, and we can see the files contained in the directory and the pathway to the directory above us (the *parent directory*) and subdirectories below us

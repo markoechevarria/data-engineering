@@ -1,4 +1,4 @@
-# What's the shell
+# 1. What's the shell
 
 The shell is a program that takes keyboard commands and passes them to the operating system to carry out
 
