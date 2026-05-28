@@ -2,7 +2,7 @@
 
 ## Variables and Constants
 
-* variable=value: assigning values to variables and constants
+* `variable=value`: assigning values to variables and constants
 
 ## Here Documents
 

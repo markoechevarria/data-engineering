@@ -1,17 +1,17 @@
 # 9. Permissions
 
-* id: Display user identity
-* chmod: Change a file’s mode
-* umask: Set the default file permissions
-* su: Run a shell as another user
-* sudo: Execute a command as another user
-* chown: Change a file’s owner
-* chgrp: Change a file’s group ownership
-* passwd: Change a user’s password
+* `id`: Display user identity
+* `chmod`: Change a file’s mode
+* `umask`: Set the default file permissions
+* `su`: Run a shell as another user
+* `sudo`: Execute a command as another user
+* `chown`: Change a file’s owner
+* `chgrp`: Change a file’s group ownership
+* `passwd`: Change a user’s password
 
 ## Owners, group members, and everybody else
 
-* In user a user may own files and directories.
+* In Linux a user may own files and directories.
 * Users can belong to a group consisting of one or more users who are given acces to files and directories by their owner
 * An owner may also grant some set of access rights to everybody, which is referred to as the world
 

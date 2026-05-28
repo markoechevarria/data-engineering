@@ -2,7 +2,7 @@
 
 * I/O redirection allows us to redefine where starndar output goes. It use the `>` redirection operator and the `>>` append redirection operator
 * Redirect standard error: use the `2>` redirector
-Redirect standar output and standard error to one file: `ls -l /bin/usr > ls-output.txt 2>&1`
+* Redirect standard output and standard error to one file: `ls -l /bin/usr > ls-output.txt 2>&1`
 
 * `cat`: reads one or more files and copies them to standard output
 * To create a file containing text entered by the user `cat > document.txt`

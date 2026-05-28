@@ -32,6 +32,16 @@ if true; then echo "It's true.; fi
 
 ## File expressions
 
+* `file1 -nt file2`: file1 is newer than file2.
+* `file1 -ot file2`: file1 is older than file2.
+* `-d file`: file exists and is a directory
+* `-e file`: file exists
+* `-f file`: file exists and is a regular file
+* `-r file`: file exists and is readable (has readable permission for the effective user).
+* `-s file`: file exists and has a length greater than zero.
+* `-w file`: file exists and is writable (has write permission for the effective user).
+* `-x file`: file exists and is executable (has execute/search permission for the effective user).
+
 ```
 #!/bin/bash
 # test-file: Evaluate the status of a file
@@ -61,27 +71,27 @@ exit
 ```
 ## String expressions
 
-* string: string is not null.
-* -n string: The length of string is greater than zero.
-* -z string: The length of string is zero.
-* string1 = string2: string1 and string2 are equal. Single or double equal signs
-* string1 == string2: may be used. The use of double equal signs is greatly preferred, but it is not POSIX compliant.
-* string1 != string2: string1 and string2 are not equal.
-* string1 > string2: string1 sorts after string2.
-* string1 < string2: string1 sorts before string2.
+* `string`: string is not null.
+* `-n string`: The length of string is greater than zero.
+* `-z string`: The length of string is zero.
+* `string1 = string2`: string1 and string2 are equal. Single or double equal signs
+* `string1 == string2`: may be used. The use of double equal signs is greatly preferred, but it is not POSIX compliant.
+* `string1 != string2`: string1 and string2 are not equal.
+* `string1 > string2`: string1 sorts after string2.
+* `string1 < string2`: string1 sorts before string2.
 
 ## Integer expressions
 
-* integer1 -eq integer2: integer1 is equal to integer2.
-* integer1 -ne integer2: integer1 is not equal to integer2.
-* integer1 -le integer2: integer1 is less than or equal to integer2.
-* integer1 -lt integer2: integer1 is less than integer2.
-* integer1 -ge integer2: integer1 is greater than or equal to integer2.
-* integer1 -gt integer2: integer1 is greater than integer2.
+* `integer1 -eq integer2`: integer1 is equal to integer2.
+* `integer1 -ne integer2`: integer1 is not equal to integer2.
+* `integer1 -le integer2`: integer1 is less than or equal to integer2.
+* `integer1 -lt integer2`: integer1 is less than integer2.
+* `integer1 -ge integer2`: integer1 is greater than or equal to integer2.
+* `integer1 -gt integer2`: integer1 is greater than integer2.
 
 ## Modern Version of test
 
-`string1 =~ regex`
+* `string1 =~ regex`
 
 ```
 if [[ "$INT" =~ ^-?[0-9]+$ ]]; then
@@ -136,14 +146,11 @@ fi
 
 ## Combining Expressions
 
-* AND | -a | &&
-* OR  | -o | ||
-* NOT | !  |  !
+* `AND | -a | &&`
+* `OR  | -o | ||`
+* `NOT | !  |  !`
 
 ## Control Operators: Another Way to Branch
 
-* command1 && command2
-* command1 || command2
-
-
-
+* `command1 && command2`
+* `command1 || command2`

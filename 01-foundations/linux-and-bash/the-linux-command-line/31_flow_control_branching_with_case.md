@@ -5,6 +5,7 @@ case word in
     [pattern [|pattern]..) commands ;; ]...
 esac
 ```
+
 ```
 #!/bin/bash
 # case-menu: a menu driven system information program
@@ -42,6 +43,7 @@ case "$REPLY" in
         ;;
 esac
 ```
+
 ## Performing multiple actions
 
 * `;;`: Case allowed only one action to be performed on a successful match

@@ -9,6 +9,7 @@ echo 'Hello World!'
 ```
 
 * Scripts should be executables, use `chmod` for it
+* Scripts can be written using multiple lines.
 
 ```
 find playground \

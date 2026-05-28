@@ -9,8 +9,8 @@
 
 * Absolute pathnames: begins with the root directory and follows the tree branch by branch until the path to the desired directory
 * Relative pathnames: stars from the working directory
-* \. : refers to the working directory
-* \.\.: referes to the working directory's parent directory
+* `.` : refers to the working directory
+* `..`: referes to the working directory's parent directory
 
 * Filenames that begin with a period character are hidden
 * Filenames and commands in Linux are case sensitive

@@ -5,6 +5,7 @@
 ## Shell functions
 
 * We could write three separate scripts and place them in a directory listed in our PATH, or we could embed the scripts within our program as shell functions
+
 ```
 function name {
     commands

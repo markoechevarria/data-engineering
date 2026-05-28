@@ -9,4 +9,4 @@
 
 * When the log on the system, the bash program starts and reads a series of configuration scripts called *startup files*. which define the default environment shared by all users
 
-* To add directories to the PATH or define additional environment variables, place those changes in .bash_profile
+* To add directories to the PATH or define additional environment variables, place those changes in *.bash_profile*
