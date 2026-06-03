@@ -14,7 +14,7 @@ Data Engineering learning repository! This repo serves as a comprehensive log of
 
 - [ ] [**Git**](): Git concepts *Pro Git*
 
-- [ X ] [**Linux and Bash**](01-foundations/linux-and-bash/README.md): Command line, shell scripting, and cron
+- [X] [**Linux and Bash**](01-foundations/linux-and-bash/README.md): Command line, shell scripting, and cron
 
 - [ ] [**Docker**](): Images vs containers, Dockerfiles (multi-stage builds), Networking, Volumes, Docker Compose *Docker Deep Dive*
 
