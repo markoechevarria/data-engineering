@@ -16,7 +16,7 @@ Data Engineering learning repository! This repo serves as a comprehensive log of
 
 - [X] [**Linux and Bash**](01-foundations/linux-and-bash/README.md): Command line, shell scripting, and cron. `Book: The linux command line`
 
-- [ ] [**Docker**](): Images vs containers, Dockerfiles (multi-stage builds), Networking, Volumes, Docker Compose. `Book: Docker Deep Dive`
+- [ ] [**Docker**](01-foundations/docker/README.md): Images vs containers, Dockerfiles (multi-stage builds), Networking, Volumes, Docker Compose. `Book: Docker Deep Dive`
 
 ### Phase 2: Data Storage & Modeling
 
