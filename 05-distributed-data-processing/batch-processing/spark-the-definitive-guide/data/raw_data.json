@@ -1,0 +1,805 @@
+{
+    "timestamp": "2026-06-04T20:31:32.796332Z",
+    "version": "56",
+    "pricing_request_id": "77f9ca78-3eb4-4d58-883b-ee4636210a38",
+    "pricing_request_data": {
+        "organization": {
+            "id": "572",
+            "name": "Avalere Health, LLC"
+        },
+        "created_by": "ehopkins@healthverity.com",
+        "has_npi": "Hashed (Anonymized)",
+        "name": "Avalere - HIV PrEP Evaluation",
+        "retrospective_months": "96",
+        "modified_on": "2026-06-04T20:31:32.796332Z",
+        "archival_period_years": ".5",
+        "created_by_id": "19573",
+        "entity_count_derivation": "dataQuery",
+        "anchor_date": null,
+        "organization_access": [
+            "Non-commercial"
+        ],
+        "shared_with": [
+            {
+                "email": "bsacchetti@healthverity.com",
+                "userProfileId": "7616"
+            },
+            {
+                "email": "edee@healthverity.com",
+                "userProfileId": "19606"
+            }
+        ],
+        "delivery_frequency": "One-time",
+        "allow_third_party_access": "false",
+        "flags": [],
+        "description": "Avalere is performing the analytics portion of a project with Merck to asses utilization patterns of PrEP amongst patients who would benefit from PrEP (PwBP). They are seeking to measure PrEP initiation, discontinuation, re-initiation, switching between oral and injectable modalities, and risk alignment metrics. The project began with an EMR-focused approach, though we are working with Avalere to communicate the value-add of incorporating closed medical and pharmacy claims. Please note this is potentially a Q2 opportunity, therefore we are requesting pricing back as soon as possible.",
+        "license_expiration": "Custom",
+        "internal_notes": null,
+        "standard_deal_terms_text": null,
+        "allow_publishing": "true",
+        "license_expiration_custom": "1.5 years",
+        "use_case_desc": null,
+        "close_date": "2026-06-30",
+        "physician_notes": "false",
+        "amendment_number": null,
+        "pricing_rejection_notes": null,
+        "data_query_years": "5.25 years",
+        "version": "56",
+        "id": "77f9ca78-3eb4-4d58-883b-ee4636210a38",
+        "provider_notes": null,
+        "cancellation_reason": null,
+        "parent_pricing_request_id": null,
+        "retrospective_months_all": "false",
+        "target_budget": "",
+        "pricing_notes": null,
+        "project_id": "P-5149-0626-0572",
+        "status": "PENDING",
+        "third_party_desc": "",
+        "data_licensing_line_items": [
+            {
+                "method": "or",
+                "vendor_id": "35",
+                "alternative_data_licensing_options": [],
+                "data_request_id": "R-5149-0626-0572-0236",
+                "pricing_type": "GROSS",
+                "last_updated_date": "2026-06-04T20:15:49.000Z",
+                "snooze_until": null,
+                "physician_notes": "false",
+                "id": "c12671fd-1b12-45e6-9414-8608a89b6fa8",
+                "provider_notes": null,
+                "cancellation_reason": null,
+                "pricing_notes": null,
+                "datafeed": {
+                    "name": "Veradigm Health",
+                    "sfdc_datafeed_id": "DS-001009",
+                    "id": "236",
+                    "can_use_expiring_pricing": "false",
+                    "type": "EMR",
+                    "type_long": "EMR"
+                },
+                "filters": [],
+                "status": "PENDING_PROVIDER_PRICING",
+                "available_entity_count": "55899754",
+                "remittance": "false",
+                "custom_entity_count": "100000",
+                "terms": [],
+                "formatted_terms_and_filters": "Patients who are identified as PwBP via CPT codes, HCPCS codes, LOINC codes, and diagnosis codes with a history of PrEP use as defined by HCPCS and NDC codes.",
+                "data_licensing_options": [
+                    {
+                        "has_npi": "Hashed (Anonymized)",
+                        "retrospective_months": "96",
+                        "archival_period_years": ".5",
+                        "entity_count_derivation": "dataQuery",
+                        "anchor_date": null,
+                        "organization_access": [
+                            "Non-commercial"
+                        ],
+                        "delivery_frequency": "One-time",
+                        "allow_third_party_access": "false",
+                        "license_expiration": "Custom",
+                        "internal_notes": "We are still getting a feel for the client's budget, so we may need to revisit scope & pricing after this initial proposal.",
+                        "remittance_required": null,
+                        "allow_publishing": "true",
+                        "license_expiration_custom": "1.5 years",
+                        "use_case_desc": "",
+                        "pricing_options": [],
+                        "physician_notes": "false",
+                        "data_query_years": "5.25 years",
+                        "id": "fd1b2ada-9eca-43fb-b878-bc54eff4417f",
+                        "provider_notes": null,
+                        "retrospective_months_all": "false",
+                        "deal_terms_text": "This option will use standard HealthVerity terms. For more information contact HealthVerity: pricing@healthverity.com",
+                        "status": "PENDING_PROVIDER_PRICING",
+                        "deal_terms_type": "Standard",
+                        "third_party_desc": "",
+                        "remittance": "false",
+                        "custom_entity_count": "100000",
+                        "pricing_guidance": {
+                            "audit": [
+                                {
+                                    "status": "Added",
+                                    "timestamp": "2026-06-04T20:08:44.000Z"
+                                }
+                            ],
+                            "notes": "We are still getting a feel for the client's budget, so we may need to revisit scope & pricing after this initial proposal.",
+                            "price": "200000"
+                        },
+                        "sequence_number": "1",
+                        "use_case": [
+                            {
+                                "id": "1",
+                                "name": "Persistency / Adherence"
+                            },
+                            {
+                                "id": "2",
+                                "name": "Outcomes research"
+                            },
+                            {
+                                "id": "8",
+                                "name": "Patient journey"
+                            }
+                        ],
+                        "other_data_source": "",
+                        "prospective_months": "0",
+                        "formatted_terms_and_filters": "Patients who are identified as PwBP via CPT codes, HCPCS codes, LOINC codes, and diagnosis codes with a history of PrEP use as defined by HCPCS and NDC codes.",
+                        "show_use_case_desc": "false",
+                        "delivery_frequency_custom": "",
+                        "entity_count_specification": "any"
+                    }
+                ]
+            },
+            {
+                "method": "or",
+                "vendor_id": "543",
+                "alternative_data_licensing_options": [],
+                "data_request_id": "R-5149-0626-0572-0176",
+                "pricing_type": "GROSS",
+                "last_updated_date": "2026-06-04T20:30:49.000Z",
+                "snooze_until": null,
+                "physician_notes": "false",
+                "id": "280151cb-aaa9-4e50-8b2e-37f06193e6d3",
+                "provider_notes": "",
+                "cancellation_reason": null,
+                "pricing_notes": "",
+                "datafeed": {
+                    "name": "Inovalon Closed Payer Claims",
+                    "sfdc_datafeed_id": "DS-001002",
+                    "id": "176",
+                    "can_use_expiring_pricing": "true",
+                    "type": "MEDICALCLAIMS",
+                    "type_long": "Medical"
+                },
+                "filters": [],
+                "status": "PENDING_SALES_PROPOSAL",
+                "available_entity_count": "118891706",
+                "remittance": "false",
+                "custom_entity_count": "120000",
+                "terms": [],
+                "formatted_terms_and_filters": "Patients who are identified as PwBP via CPT codes, HCPCS codes, LOINC codes, and diagnosis codes with a history of PrEP use as defined by HCPCS and NDC codes.",
+                "data_licensing_options": [
+                    {
+                        "has_npi": "Hashed (Anonymized)",
+                        "retrospective_months": "96",
+                        "archival_period_years": ".5",
+                        "entity_count_derivation": "dataQuery",
+                        "anchor_date": null,
+                        "organization_access": [
+                            "Non-commercial"
+                        ],
+                        "delivery_frequency": "One-time",
+                        "allow_third_party_access": "false",
+                        "license_expiration": "Custom",
+                        "internal_notes": "Combined pricing for Inovalon closed medical & pharmacy claims.",
+                        "remittance_required": null,
+                        "allow_publishing": "true",
+                        "license_expiration_custom": "1.5 years",
+                        "use_case_desc": "",
+                        "pricing_options": [
+                            {
+                                "counter_price": null,
+                                "net_price_after_expiration": null,
+                                "price": "205,220",
+                                "id": "db99676f-19fe-48f1-bb79-a1199da47633",
+                                "expires_at": "2026-06-30",
+                                "submitted_price": null,
+                                "is_expired": "false",
+                                "status": "PENDING_SALES_PROPOSAL",
+                                "net_price": "",
+                                "notes": null,
+                                "audit": [
+                                    {
+                                        "status": "PRICE_RECEIVED",
+                                        "timestamp": "2026-06-04T20:25:07.000Z"
+                                    }
+                                ],
+                                "type": "SUBMITTED",
+                                "price_after_expiration": "215,481"
+                            }
+                        ],
+                        "physician_notes": "false",
+                        "data_query_years": "5.25 years",
+                        "id": "2948ce30-875e-4138-a3e4-3a285f0e046b",
+                        "provider_notes": null,
+                        "retrospective_months_all": "false",
+                        "deal_terms_text": "This option will use standard HealthVerity terms. For more information contact HealthVerity: pricing@healthverity.com",
+                        "status": "PENDING_SALES_PROPOSAL",
+                        "deal_terms_type": "Standard",
+                        "third_party_desc": "",
+                        "remittance": "false",
+                        "custom_entity_count": "120000",
+                        "pricing_guidance": {
+                            "audit": [
+                                {
+                                    "status": "Added",
+                                    "timestamp": "2026-06-04T18:34:50.000Z"
+                                }
+                            ],
+                            "notes": "Combined pricing for Inovalon closed medical & pharmacy claims. Utilizing the rate card, we believe this would be $165,500 assuming 96 months of history for a specialty/non-rare TA + 50% lift for additional 6 months of license term ($82,750) + 5% lift for 6 months of archival/regulatory retention ($8,275) = $256,525. We will need to apply the 20% HV discount in order to secure this as the client's budget is limited.",
+                            "price": "205220"
+                        },
+                        "sequence_number": "1",
+                        "use_case": [
+                            {
+                                "id": "1",
+                                "name": "Persistency / Adherence"
+                            },
+                            {
+                                "id": "2",
+                                "name": "Outcomes research"
+                            },
+                            {
+                                "id": "8",
+                                "name": "Patient journey"
+                            }
+                        ],
+                        "other_data_source": "",
+                        "prospective_months": "0",
+                        "formatted_terms_and_filters": "Patients who are identified as PwBP via CPT codes, HCPCS codes, LOINC codes, and diagnosis codes with a history of PrEP use as defined by HCPCS and NDC codes.",
+                        "show_use_case_desc": "false",
+                        "delivery_frequency_custom": "",
+                        "entity_count_specification": "any"
+                    }
+                ]
+            },
+            {
+                "method": "or",
+                "vendor_id": "1868",
+                "alternative_data_licensing_options": [],
+                "data_request_id": "R-5149-0626-0572-0452",
+                "pricing_type": "GROSS",
+                "last_updated_date": "2026-06-04T20:31:32.000Z",
+                "snooze_until": null,
+                "physician_notes": "false",
+                "id": "033ca785-aad3-4c87-827a-d830d1086384",
+                "provider_notes": "",
+                "cancellation_reason": null,
+                "pricing_notes": "",
+                "datafeed": {
+                    "name": "Source 9",
+                    "sfdc_datafeed_id": "DS-001071",
+                    "id": "452",
+                    "can_use_expiring_pricing": "false",
+                    "type": "MEDICALCLAIMS",
+                    "type_long": "Medical"
+                },
+                "filters": [],
+                "status": "PENDING_PRICING_RELEASE",
+                "available_entity_count": "20454900",
+                "remittance": "false",
+                "custom_entity_count": "15000",
+                "terms": [],
+                "formatted_terms_and_filters": "Patients who are identified as PwBP via CPT codes, HCPCS codes, LOINC codes, and diagnosis codes with a history of PrEP use as defined by HCPCS and NDC codes.",
+                "data_licensing_options": [
+                    {
+                        "has_npi": "Hashed (Anonymized)",
+                        "retrospective_months": "96",
+                        "archival_period_years": ".5",
+                        "entity_count_derivation": "dataQuery",
+                        "anchor_date": null,
+                        "organization_access": [
+                            "Non-commercial"
+                        ],
+                        "delivery_frequency": "One-time",
+                        "allow_third_party_access": "false",
+                        "license_expiration": "Custom",
+                        "internal_notes": "Combined pricing for Source 9 Dx & Rx. We are still getting a feel for the client's budget, so we may need to revisit scope & pricing after this initial proposal.",
+                        "remittance_required": null,
+                        "allow_publishing": "true",
+                        "license_expiration_custom": "1.5 years",
+                        "use_case_desc": "",
+                        "pricing_options": [
+                            {
+                                "counter_price": null,
+                                "net_price_after_expiration": null,
+                                "price": "125,000",
+                                "id": "ecf55e91-eea1-4e7b-b805-4130924025b6",
+                                "expires_at": "",
+                                "submitted_price": null,
+                                "is_expired": "false",
+                                "status": "PROVIDER_PENDING_PRICING_RELEASE",
+                                "net_price": "",
+                                "notes": null,
+                                "audit": [
+                                    {
+                                        "status": "PRICE_RECEIVED",
+                                        "timestamp": "2026-06-04T20:31:32.000Z"
+                                    }
+                                ],
+                                "type": "SUBMITTED",
+                                "price_after_expiration": null
+                            }
+                        ],
+                        "physician_notes": "false",
+                        "data_query_years": "5.25 years",
+                        "id": "73a1c8ec-ab00-4799-a4d0-be6234d0c139",
+                        "provider_notes": null,
+                        "retrospective_months_all": "false",
+                        "deal_terms_text": "This option will use standard HealthVerity terms. For more information contact HealthVerity: pricing@healthverity.com",
+                        "status": "PENDING_PRICING_RELEASE",
+                        "deal_terms_type": "Standard",
+                        "third_party_desc": "",
+                        "remittance": "false",
+                        "custom_entity_count": "15000",
+                        "pricing_guidance": {
+                            "audit": [
+                                {
+                                    "status": "Added",
+                                    "timestamp": "2026-06-04T20:12:58.000Z"
+                                },
+                                {
+                                    "status": "Added",
+                                    "timestamp": "2026-06-04T20:13:56.000Z"
+                                }
+                            ],
+                            "notes": "Combined pricing for Source 9 Dx & Rx. We are still getting a feel for the client's budget, so we may need to revisit scope & pricing after this initial proposal.",
+                            "price": "125000"
+                        },
+                        "sequence_number": "1",
+                        "use_case": [
+                            {
+                                "id": "1",
+                                "name": "Persistency / Adherence"
+                            },
+                            {
+                                "id": "2",
+                                "name": "Outcomes research"
+                            },
+                            {
+                                "id": "8",
+                                "name": "Patient journey"
+                            }
+                        ],
+                        "other_data_source": "",
+                        "prospective_months": "0",
+                        "formatted_terms_and_filters": "Patients who are identified as PwBP via CPT codes, HCPCS codes, LOINC codes, and diagnosis codes with a history of PrEP use as defined by HCPCS and NDC codes.",
+                        "show_use_case_desc": "false",
+                        "delivery_frequency_custom": "",
+                        "entity_count_specification": "any"
+                    }
+                ]
+            },
+            {
+                "method": "or",
+                "vendor_id": "543",
+                "alternative_data_licensing_options": [],
+                "data_request_id": "R-5149-0626-0572-0177",
+                "pricing_type": "GROSS",
+                "last_updated_date": "2026-06-04T20:31:00.000Z",
+                "snooze_until": null,
+                "physician_notes": "false",
+                "id": "14d809dd-37ff-4a4f-a252-7cdc5977e19f",
+                "provider_notes": "",
+                "cancellation_reason": null,
+                "pricing_notes": "",
+                "datafeed": {
+                    "name": "Inovalon",
+                    "sfdc_datafeed_id": "DS-001003",
+                    "id": "177",
+                    "can_use_expiring_pricing": "true",
+                    "type": "RXCLAIMS",
+                    "type_long": "Pharmacy"
+                },
+                "filters": [],
+                "status": "PENDING_SALES_PROPOSAL",
+                "available_entity_count": "103312455",
+                "remittance": "false",
+                "custom_entity_count": "12000",
+                "terms": [],
+                "formatted_terms_and_filters": "Patients with a history of PrEP use as defined by HCPCS and NDC codes.",
+                "data_licensing_options": [
+                    {
+                        "has_npi": "Hashed (Anonymized)",
+                        "retrospective_months": "96",
+                        "archival_period_years": ".5",
+                        "entity_count_derivation": "dataQuery",
+                        "anchor_date": null,
+                        "organization_access": [
+                            "Non-commercial"
+                        ],
+                        "delivery_frequency": "One-time",
+                        "allow_third_party_access": "false",
+                        "license_expiration": "Custom",
+                        "internal_notes": "Please see Inovalon Closed Payer Claims - Medical for combined request.",
+                        "remittance_required": null,
+                        "allow_publishing": "true",
+                        "license_expiration_custom": "1.5 years",
+                        "use_case_desc": "",
+                        "pricing_options": [
+                            {
+                                "counter_price": null,
+                                "net_price_after_expiration": null,
+                                "price": "0",
+                                "id": "53882d02-51a5-4143-ad71-9421d926e85e",
+                                "expires_at": "",
+                                "submitted_price": null,
+                                "is_expired": "false",
+                                "status": "PENDING_SALES_PROPOSAL",
+                                "net_price": "",
+                                "notes": null,
+                                "audit": [
+                                    {
+                                        "status": "PRICE_RECEIVED",
+                                        "timestamp": "2026-06-04T20:25:18.000Z"
+                                    }
+                                ],
+                                "type": "SUBMITTED",
+                                "price_after_expiration": null
+                            }
+                        ],
+                        "physician_notes": "false",
+                        "data_query_years": "5.25 years",
+                        "id": "57701862-e2e0-40f3-bbf7-3d38a4cca04b",
+                        "provider_notes": null,
+                        "retrospective_months_all": "false",
+                        "deal_terms_text": "This option will use standard HealthVerity terms. For more information contact HealthVerity: pricing@healthverity.com",
+                        "status": "PENDING_SALES_PROPOSAL",
+                        "deal_terms_type": "Standard",
+                        "third_party_desc": "",
+                        "remittance": "false",
+                        "custom_entity_count": "120000",
+                        "pricing_guidance": {
+                            "audit": [
+                                {
+                                    "status": "Added",
+                                    "timestamp": "2026-06-04T20:10:56.000Z"
+                                }
+                            ],
+                            "notes": "Please see Inovalon Closed Payer Claims - Medical for combined request.",
+                            "price": "0"
+                        },
+                        "sequence_number": "1",
+                        "use_case": [
+                            {
+                                "id": "1",
+                                "name": "Persistency / Adherence"
+                            },
+                            {
+                                "id": "2",
+                                "name": "Outcomes research"
+                            },
+                            {
+                                "id": "8",
+                                "name": "Patient journey"
+                            }
+                        ],
+                        "other_data_source": "",
+                        "prospective_months": "0",
+                        "formatted_terms_and_filters": "Patients with a history of PrEP use as defined by HCPCS and NDC codes.",
+                        "show_use_case_desc": "false",
+                        "delivery_frequency_custom": "",
+                        "entity_count_specification": "any"
+                    }
+                ]
+            },
+            {
+                "method": "or",
+                "vendor_id": "1868",
+                "alternative_data_licensing_options": [],
+                "data_request_id": "R-5149-0626-0572-0424",
+                "pricing_type": "GROSS",
+                "last_updated_date": "2026-06-04T20:15:49.000Z",
+                "snooze_until": null,
+                "physician_notes": "false",
+                "id": "f717604b-f25d-404c-9db9-2274a34e4876",
+                "provider_notes": null,
+                "cancellation_reason": null,
+                "pricing_notes": null,
+                "datafeed": {
+                    "name": "Source 9",
+                    "sfdc_datafeed_id": "DS-001070",
+                    "id": "424",
+                    "can_use_expiring_pricing": "false",
+                    "type": "RXCLAIMS",
+                    "type_long": "Pharmacy"
+                },
+                "filters": [],
+                "status": "PENDING_PROVIDER_PRICING",
+                "available_entity_count": "18065739",
+                "remittance": "false",
+                "custom_entity_count": "15000",
+                "terms": [],
+                "formatted_terms_and_filters": "Patients with a history of PrEP use as defined by HCPCS and NDC codes.",
+                "data_licensing_options": [
+                    {
+                        "has_npi": "Hashed (Anonymized)",
+                        "retrospective_months": "96",
+                        "archival_period_years": ".5",
+                        "entity_count_derivation": "dataQuery",
+                        "anchor_date": null,
+                        "organization_access": [
+                            "Non-commercial"
+                        ],
+                        "delivery_frequency": "One-time",
+                        "allow_third_party_access": "false",
+                        "license_expiration": "Custom",
+                        "internal_notes": "Please see Source 9 Dx for combined request.",
+                        "remittance_required": null,
+                        "allow_publishing": "true",
+                        "license_expiration_custom": "1.5 years",
+                        "use_case_desc": "",
+                        "pricing_options": [],
+                        "physician_notes": "false",
+                        "data_query_years": "5.25 years",
+                        "id": "82f2e6b8-e87f-46f7-8a80-a1c7f05b042d",
+                        "provider_notes": null,
+                        "retrospective_months_all": "false",
+                        "deal_terms_text": "This option will use standard HealthVerity terms. For more information contact HealthVerity: pricing@healthverity.com",
+                        "status": "PENDING_PROVIDER_PRICING",
+                        "deal_terms_type": "Standard",
+                        "third_party_desc": "",
+                        "remittance": "false",
+                        "custom_entity_count": "15000",
+                        "pricing_guidance": {
+                            "audit": [
+                                {
+                                    "status": "Added",
+                                    "timestamp": "2026-06-04T20:11:22.000Z"
+                                }
+                            ],
+                            "notes": "Please see Source 9 Dx for combined request.",
+                            "price": "0"
+                        },
+                        "sequence_number": "1",
+                        "use_case": [
+                            {
+                                "id": "1",
+                                "name": "Persistency / Adherence"
+                            },
+                            {
+                                "id": "2",
+                                "name": "Outcomes research"
+                            },
+                            {
+                                "id": "8",
+                                "name": "Patient journey"
+                            }
+                        ],
+                        "other_data_source": "",
+                        "prospective_months": "0",
+                        "formatted_terms_and_filters": "Patients with a history of PrEP use as defined by HCPCS and NDC codes.",
+                        "show_use_case_desc": "false",
+                        "delivery_frequency_custom": "",
+                        "entity_count_specification": "any"
+                    }
+                ]
+            },
+            {
+                "method": "or",
+                "vendor_id": "1861",
+                "alternative_data_licensing_options": [],
+                "data_request_id": "R-5149-0626-0572-0263",
+                "pricing_type": "GROSS",
+                "last_updated_date": "2026-06-04T20:15:49.000Z",
+                "snooze_until": null,
+                "physician_notes": "false",
+                "id": "bc1095ee-2ee2-469b-9958-175cd795c40b",
+                "provider_notes": null,
+                "cancellation_reason": null,
+                "pricing_notes": null,
+                "datafeed": {
+                    "name": "Veritas Data Research",
+                    "sfdc_datafeed_id": "DS-001027",
+                    "id": "263",
+                    "can_use_expiring_pricing": "false",
+                    "type": "CONSUMER",
+                    "type_long": "Consumer"
+                },
+                "filters": [],
+                "status": "PENDING_PROVIDER_PRICING",
+                "available_entity_count": "0",
+                "remittance": "false",
+                "custom_entity_count": "100000",
+                "terms": [],
+                "formatted_terms_and_filters": "Patients who are identified as PwBP via CPT codes, HCPCS codes, LOINC codes, and diagnosis codes with a history of PrEP use as defined by HCPCS and NDC codes.",
+                "data_licensing_options": [
+                    {
+                        "has_npi": "Hashed (Anonymized)",
+                        "retrospective_months": "96",
+                        "archival_period_years": ".5",
+                        "entity_count_derivation": "dataQuery",
+                        "anchor_date": null,
+                        "organization_access": [
+                            "Non-commercial"
+                        ],
+                        "delivery_frequency": "One-time",
+                        "allow_third_party_access": "false",
+                        "license_expiration": "Custom",
+                        "internal_notes": "Please note Veritas is being included in order to deliver this in the Taxonomy X format. We are still getting a feel for the client's budget, so we may need to revisit scope & pricing after this initial proposal.",
+                        "remittance_required": null,
+                        "allow_publishing": "true",
+                        "license_expiration_custom": "Custom",
+                        "use_case_desc": null,
+                        "pricing_options": [],
+                        "physician_notes": "false",
+                        "data_query_years": "5.25 years",
+                        "id": "f63512d7-2e0f-47c6-bba4-29310464f4a4",
+                        "provider_notes": null,
+                        "retrospective_months_all": "false",
+                        "deal_terms_text": "This option will use standard HealthVerity terms. For more information contact HealthVerity: pricing@healthverity.com",
+                        "status": "PENDING_PROVIDER_PRICING",
+                        "deal_terms_type": "Standard",
+                        "third_party_desc": "",
+                        "remittance": "false",
+                        "custom_entity_count": "100000",
+                        "pricing_guidance": {
+                            "audit": [
+                                {
+                                    "status": "Added",
+                                    "timestamp": "2026-06-04T16:14:42.000Z"
+                                },
+                                {
+                                    "status": "Added",
+                                    "timestamp": "2026-06-04T20:08:18.000Z"
+                                },
+                                {
+                                    "status": "Added",
+                                    "timestamp": "2026-06-04T20:12:49.000Z"
+                                }
+                            ],
+                            "notes": "Please note Veritas is being included in order to deliver this in the Taxonomy X format. We are still getting a feel for the client's budget, so we may need to revisit scope & pricing after this initial proposal.",
+                            "price": "25000"
+                        },
+                        "sequence_number": "1",
+                        "use_case": [
+                            {
+                                "id": "1",
+                                "name": "Persistency / Adherence"
+                            },
+                            {
+                                "id": "2",
+                                "name": "Outcomes research"
+                            },
+                            {
+                                "id": "8",
+                                "name": "Patient journey"
+                            }
+                        ],
+                        "other_data_source": "",
+                        "prospective_months": "0",
+                        "formatted_terms_and_filters": "Patients who are identified as PwBP via CPT codes, HCPCS codes, LOINC codes, and diagnosis codes with a history of PrEP use as defined by HCPCS and NDC codes in claims who overlap in mortality data.",
+                        "show_use_case_desc": "false",
+                        "delivery_frequency_custom": "",
+                        "entity_count_specification": "any"
+                    }
+                ]
+            },
+            {
+                "method": "or",
+                "vendor_id": "1",
+                "alternative_data_licensing_options": [],
+                "data_request_id": "R-5149-0626-0572-0568",
+                "pricing_type": "GROSS",
+                "last_updated_date": "2026-06-04T20:15:49.000Z",
+                "snooze_until": null,
+                "physician_notes": "false",
+                "id": "7cfff4b9-e596-4957-96d5-8d8f626296b3",
+                "provider_notes": "",
+                "cancellation_reason": null,
+                "pricing_notes": null,
+                "datafeed": {
+                    "name": "TaXonomy (X)",
+                    "sfdc_datafeed_id": "DS-001090",
+                    "id": "568",
+                    "can_use_expiring_pricing": "false",
+                    "type": "PRIVATEDATA",
+                    "type_long": "Uncategorized data"
+                },
+                "filters": [],
+                "status": "PENDING_PROVIDER_PRICING",
+                "available_entity_count": "0",
+                "remittance": "false",
+                "custom_entity_count": "120000",
+                "terms": [],
+                "formatted_terms_and_filters": "Patients who are identified as PwBP via CPT codes, HCPCS codes, LOINC codes, and diagnosis codes with a history of PrEP use as defined by HCPCS and NDC codes.",
+                "data_licensing_options": [
+                    {
+                        "has_npi": "Hashed (Anonymized)",
+                        "retrospective_months": "96",
+                        "archival_period_years": ".5",
+                        "entity_count_derivation": "dataQuery",
+                        "anchor_date": null,
+                        "organization_access": [
+                            "Non-commercial"
+                        ],
+                        "delivery_frequency": "One-time",
+                        "allow_third_party_access": "false",
+                        "license_expiration": "Custom",
+                        "internal_notes": "",
+                        "remittance_required": null,
+                        "allow_publishing": "true",
+                        "license_expiration_custom": "Custom",
+                        "use_case_desc": null,
+                        "pricing_options": [],
+                        "physician_notes": "false",
+                        "data_query_years": "5.25 years",
+                        "id": "c4dc2252-9b0b-4c3c-bbdb-ebd82a7677e4",
+                        "provider_notes": null,
+                        "retrospective_months_all": "false",
+                        "deal_terms_text": "This option will use standard HealthVerity terms. For more information contact HealthVerity: pricing@healthverity.com",
+                        "status": "PENDING_PROVIDER_PRICING",
+                        "deal_terms_type": "Standard",
+                        "third_party_desc": "",
+                        "remittance": "false",
+                        "custom_entity_count": "120000",
+                        "pricing_guidance": {
+                            "audit": [],
+                            "notes": "12% of claims data fees",
+                            "price": null
+                        },
+                        "sequence_number": "1",
+                        "use_case": [
+                            {
+                                "id": "1",
+                                "name": "Persistency / Adherence"
+                            },
+                            {
+                                "id": "2",
+                                "name": "Outcomes research"
+                            },
+                            {
+                                "id": "8",
+                                "name": "Patient journey"
+                            }
+                        ],
+                        "other_data_source": "",
+                        "prospective_months": "0",
+                        "formatted_terms_and_filters": "Taxonomy X delivery fee",
+                        "show_use_case_desc": "false",
+                        "delivery_frequency_custom": "",
+                        "entity_count_specification": "any"
+                    }
+                ]
+            }
+        ],
+        "remittance": "false",
+        "entity": "patient",
+        "request_id": null,
+        "custom_entity_count": null,
+        "created_on": "2026-06-03T19:45:00.174000Z",
+        "opportunity_id": "011689",
+        "client_rep": "Ed Hopkins",
+        "submission_date": null,
+        "use_cases": [
+            {
+                "id": "1",
+                "name": "Persistency / Adherence"
+            },
+            {
+                "id": "2",
+                "name": "Outcomes research"
+            },
+            {
+                "id": "8",
+                "name": "Patient journey"
+            }
+        ],
+        "other_data_source": "",
+        "prospective_months": "0",
+        "show_use_case_desc": "false",
+        "sales_stage": "Develop",
+        "loss_reason": null,
+        "delivery_frequency_custom": "",
+        "entity_count_specification": "any"
+    },
+    "event_type": "PricingRequestEvent"
+}
