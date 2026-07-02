@@ -1,23 +1,22 @@
 # 1. Introduction
 
-Kubernetes is an open source orchestrator for deploying containerized applications
-Kubernetes is a proven infraestructura for distributed systems that is suitable for cloud-native developer of all scales
-
-* Because we rely on APIs (via by services are delivered over the network), these systems must be highly `reliable`
+* Kubernetes is an open source orchestrator for deploying containerized applications
+* Kubernetes is a proven infraestructura for distributed systems that is suitable for cloud-native developer of all scales
+* Because we rely on APIs (via by services that are delivered over the network), these systems must be highly `reliable`
 * They must maintain `availability` even during software rollouts or other maintenance events
-* Because more and more of the world is coming online and using such services, they must be highly `scalable` to that they can grow their capacity to keep up with ever-increasing usage without radical redesign of the distributed system that implements the services
+* Because more and more of the world is coming online and using such services, they must be highly `scalable` so that they can grow their capacity to keep up with ever-increasing usage without radical redesign of the distributed system that implements the services
 
 ## Velocity
 
 * The software industry has evolved from shipping products as boxed CDs or DVDs to software that is delivered over the network via web-based services that are updated hourly
 * Velocity is not defined in terms of simply raw speed. While the users are always looking for iterative improvement, they are more interested in a highly reliable service
-* Velocity is measured not in terms of the raw number of features you can ship per hour or day, but rather in terms of the number of things you can ship while maintaining a highly available service
+* Velocity is measured not in terms of the raw number of features we can ship per hour or day, but rather in terms of the number of things we can ship while maintaining a highly available service
 
 ### Immutability
 
 * With immutable infraestructure, once an artifact is created in the system it does not change via user modifications
 * With a mutable system, changes are applied as incremental updates to an existing system. The current state of the infraestructure is not represented as a single artifact, but rather an accumulation of incremental updates and changes over time
-* In an immutable system, rather than a series of incremental updates and changes, and entirely new, complete image is built, where the update simply replaces the entire image with the newer image in a single operation
+* In an immutable system, rather than a series of incremental updates and changes, an entirely new, complete image is built, where the update simply replaces the entire image with the newer image in a single operation
 * The act of building a new container improve reliability, make it easy to understand exactly the differences in some new versión and, if something goes wrong, to determine what has changed and how to fix it
 * Immutable container images are at the core of everything that you will build in Kubernetes. It is posible to imperatively change running containers, but this is an anti-pattern to be used only in extreme cases where there are no other options. And even then, the changes must also be recorded through a declarative configuration update at some later time.
 
@@ -62,8 +61,7 @@ Kubernetes is a proven infraestructura for distributed systems that is suitable 
 ### Separation of Concerns for consistency and Scaling
 
 * The container orchestration API becomes a crisp contract that separates the responsabilities of the application operator from the cluster orchestration operator. The application developer relies on the service-level agreement (SLA) delivered by the container orchestration API, without worrying about the details of how this SLA is achieved. Likewise, the container orchestration API realiability engineer focuses on delivering the orchestration API's SLA without worrying about the applications that are running on top of it
-
-* There is a thriving ecosystem of companies and projects that help to install and manage Kubernetes. 
+* There is a thriving ecosystem of companies and projects that help to install and manage Kubernetes.
 
 ## Abstracting your infraestructure
 
