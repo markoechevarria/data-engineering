@@ -2,7 +2,7 @@
 
 * Kubernetes is an open source orchestrator for deploying containerized applications
 * Kubernetes is a proven infraestructura for distributed systems that is suitable for cloud-native developer of all scales
-* Because we rely on APIs (via by services that are delivered over the network), these systems must be highly `reliable`
+* Because we rely on APIs (that are delivered over the network via by services), these systems must be highly `reliable`
 * They must maintain `availability` even during software rollouts or other maintenance events
 * Because more and more of the world is coming online and using such services, they must be highly `scalable` so that they can grow their capacity to keep up with ever-increasing usage without radical redesign of the distributed system that implements the services
 
@@ -14,11 +14,11 @@
 
 ### Immutability
 
-* With immutable infraestructure, once an artifact is created in the system it does not change via user modifications
 * With a mutable system, changes are applied as incremental updates to an existing system. The current state of the infraestructure is not represented as a single artifact, but rather an accumulation of incremental updates and changes over time
 * In an immutable system, rather than a series of incremental updates and changes, an entirely new, complete image is built, where the update simply replaces the entire image with the newer image in a single operation
-* The act of building a new container improve reliability, make it easy to understand exactly the differences in some new versión and, if something goes wrong, to determine what has changed and how to fix it
-* Immutable container images are at the core of everything that you will build in Kubernetes. It is posible to imperatively change running containers, but this is an anti-pattern to be used only in extreme cases where there are no other options. And even then, the changes must also be recorded through a declarative configuration update at some later time.
+* With immutable infraestructure, once an artifact is created in the system it does not change via user modifications
+* The act of building a new container improves reliability, makes it easy to understand exactly the differences in some new version and, if something goes wrong, to determine what has changed and how to fix it
+* Immutable container images are at the core of everything that we will build in Kubernetes. It is posible to imperatively change running containers, but this is an anti-pattern to be used only in extreme cases where there are no other options. And even then, the changes must also be recorded through a declarative configuration update at some later time.
 
 ### Declarative configuration
 
@@ -31,7 +31,7 @@
 
 * Kubernetes is an online, self-healing system. When it receives the desired state configuration, it does not simply take a set of actions to make the current state match the desired state a single time. It continuously takes actions to ensure that the current state matches the desired state
 * A more traditional operator repair involves a manual series of mitigation steps, or human intervention performed in response to some sort of alert
-* If you assert a desired state of three replicas to Kubernetes, it does not just créate three replicas - it continuously ensures that there are exactly three replicas. If you manually create a fourth replica, Kubernetes will destroy one to bring the number back to three. If you manually destroy a replica, Kubernetes will create one to again return to the desired state
+* If you assert a desired state of three replicas to Kubernetes, it does not just create three replicas - it continuously ensures that there are exactly three replicas. If you manually create a fourth replica, Kubernetes will destroy one to bring the number back to three. If you manually destroy a replica, Kubernetes will create one to again return to the desired state
 
 ## Scaling your service and your teams
 
@@ -76,5 +76,5 @@
 
 ## Cloud Native Ecosystem
 
-* In the years since it was released, tools for nearly every tak, from machine learning to continuous development and serverless programming models have been built for Kubernetes
+* In the years since it was released, tools for nearly every task, from machine learning to continuous development and serverless programming models have been built for Kubernetes
 * A way to navigate the cloud native ecosystem is via integration with Kubernetes-as-a-Service. At this point, most of the KaaS offerings also have additional services via open source projects from the cloud native ecosystem
