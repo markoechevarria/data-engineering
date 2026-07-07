@@ -1,7 +1,7 @@
 # 2. Creating and Running containers
 
 * Kubernetes is a platform for creating, deploying and managing distributed applications
-* Application programs are tiplically comprised of a language runtime, libraries and source code
+* Application programs are tipically comprised of a language runtime, libraries and source code
 * The traditional methods of running multiple programs on a single machine require that all of these programs share the same versions of shared libraries on the system
 * Docker, the default tool most people use for containers, makes it easy to package an executable and push it to remote registry where it can later be pulled by others
 * Container images bundle a program and its dependencies into a single artifact under a root filesystem
@@ -12,12 +12,12 @@
 
 ### The Docker Image format
 
-* The most popular and widespread container image format is the Docker image format, which was developed by the Docker open  source Project for packaging, distributing, and running containers using the `docker` command
+* The most popular and widespread container image format is the Docker image format, which was developed by the Docker open source Project for packaging, distributing, and running containers using the `docker` command
 * The Docker image format continues to be the facto standard, and is made up of a series of filesystem layers. Each layer adds, removes, or modifies files from the preceding layer in the filesystem
 * Container images are typically combined with a container configuration, which provides instructions on how to set up the container environment and execute an application entry point
 * Containers fall into two main categories:
-* System containers: seek to mimic vms and often run a full boot process
-* Application containers: They commonly run a single program
+  * System containers: seek to mimic vms and often run a full boot process
+  * Application containers: They commonly run a single program
 
 ## Building applications with Docker
 
@@ -27,10 +27,10 @@
 
 * A Dockerfile can be used to automate the creation of a Docker container image
 * The `Dockerfile` is a recipe for how to build the container image, while `.dockerignore` defines the set of files that should be ignored when copying files into the image
-* `docker build -t app-name .`: to créate the app-name Docker image
+* `docker build -t app-name .`: to crEate the app-name Docker image
 * `docker run --rm -p 3000:3000 app-name`: to run an image
 
-### Optmizing Image Sizes
+### Optimazing Image Sizes
 
 * Files that are removed by subsequent layers in the system are actually still present in the images; they're just inaccesibles
 * Every time a layer is changed, it changes every layer that comes after it. It means that they need to be rebuilt, repushed and repulled to deploy the image to development
@@ -40,7 +40,7 @@
 * Don't build containers with passwords baked in - and this includes not just in the final layer, but any layers in the image
 * Deleting a file in one layer doesn't delete that file from preceding layers. Is still takes up space, and it can be accessed by anyone with the right tools
 * Secret and images should never be mixed
-* Because container images are narrowly focused on running individual applications, a best practice for container images is to minimize the files withing the container image
+* Because container images are narrowly focused on running individual applications, a best practice for container images is to minimize the files within the container image
 
 ## Multistage Image Builds
 
@@ -53,7 +53,7 @@
 * Public registries allow anyone to download images stored in the registry
 * Private registries require authentication to download images
 * To push an image, we need to authenticate to the registry using the `docker login` command
-* Once we are logged in, we can tag our image by prepending the target Docker registry. We can also append another identifier that is usually used fo the versión of variant of that image, separated by a colon `docker tag image-name docker-registrie:version`, then we can push the image `docker push docker-registrie:version`
+* Once we are logged in, we can tag our image by prepending the target Docker registry. We can also append another identifier that is usually used fo the versión of variant of that image, separated by a colon `docker tag image-name docker-registry:version`, then we can push the image `docker push docker-registry:version`
 
 ## The container Runtime Interface
 
@@ -61,7 +61,7 @@
 
 ### Running Containers with Docker
 
-* `Docker run -d --name alias-container -p host-port:container-port name-image`: to deploy a container using the `name-image` image
+* `docker run -d --name alias-container -p host-port:container-port name-image`: to deploy a container using the `name-image` image
 
 ### Limiting Resource Usage
 
@@ -75,7 +75,7 @@
 
 ## Cleanup
 
-* `docker rmi <tag-name` and `docker rmi <image-id>`: delete an image
+* `docker rmi <tag-name>` and `docker rmi <image-id>`: delete an image
 * Unless we explicitly delete an image it will live on our system forever, even if we build a new image with an identical name
 * `docker images`: to see the images currently on our machine
-* `docker system prune`: for general cleanup. It Will remove all stopped containers, all untagged images, and all unused image layers cached as part of the build process
+* `docker system prune`: for general cleanup. It will remove all stopped containers, all untagged images, and all unused image layers cached as part of the build process
