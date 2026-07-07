@@ -33,13 +33,13 @@
 ## Listing Kubernetes Worker Nodes
 
 * `kubectl get nodes`: list out all of the nodes in the cluster
-* In Kubernetes, nodes are separated into `control-plane` nodes that contain containers like the API server, scheduler, etc, which manage the cluster, and `worker` nodes where our containers Will run
+* In Kubernetes, nodes are separated into `control-plane` nodes that contain containers like the API server, scheduler, etc, which manage the cluster, and `worker` nodes where our containers will run
 * `kubectl describe nodes <name-node>`: get more information about a specific node. It display:
-* Basic information about the node
-* Information about the operation, it show disk and memory space
-* Capacity of the machine
-* Information about the software on the node, including the versión of Docker that is running, the versions of K8s and the Linux kernel
-* Information about the Pods that are curerntly running on this node
+  * Basic information about the node
+  * Information about the operation, it shows disk and memory space
+  * Capacity of the machine
+  * Information about the software on the node, including the version of Docker that is running, the versions of K8s and the Linux kernel
+  * Information about the Pods that are curerntly running on this node
 
 ## Cluster Components
 
@@ -48,7 +48,7 @@
 ### Kubernetes Proxy
 
 * Is responsable for routing network traffic to load-balanced services in the Kubernetes cluster. The proxy must be present on every node in the cluster
-* Kubernetes has an API object named DaemonSet, that is used in many clústers to accomplish the presence of proxy on every node
+* Kubernetes has an API object named DaemonSet, that is used in many clusters to accomplish the presence of proxy on every node
 * `kubectl get daemonSets --namespace=<name-space> kube-proxy`: to show the proxies
 
 ### Kubernetes DNS
@@ -56,8 +56,7 @@
 * Kubernetes runs a DNS server, which provides naming and Discovery for the services that are defined in the cluster
 * The DNS server also runs as a replicated service on the cluster
 * The DNS server is run as a Kubernetes deployment, which manages these replicas
-* There is also a Kubernetes service that performs load balancing for the DNS server
-* kubectl get deployments --namespace=<name-namespace> core-dns
+* There is also a Kubernetes service that performs load balancing for the DNS server, it can be seen with `kubectl get deployments --namespace=<name-namespace> core-dns`
 
 ### Kubernetes UI
 
