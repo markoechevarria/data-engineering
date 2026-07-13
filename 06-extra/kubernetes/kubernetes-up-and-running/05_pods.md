@@ -66,6 +66,156 @@ spec:
 * `kubectl delete pods/kuard`: delete a Pod by name
 * `kubectl delete -f file.yaml`: delete a Pod by the file used to create it
 
-### Accessing Pods
+## Accessing Pods
 
-* 
+### Using Port Forwarding
+
+* Access easily to a specific Pod, even if it's not serving traffic on the internet
+* `kubectl port-forward <pod-name> <local-port>:<remote-port>`: to create a secure tunnel from the local machine, through the Kubernetes master, to the instance of the Pod running on one of the worker nodes
+
+### Getting more info with Logs
+
+* `kubectl logs <pod-name>`: downloads the current logs from the runnins instance
+* `kubectl logs -f <pod-name>`: continuously stream logs
+* `kubectl logs --previous <pod-name>`: get logs from a previous instance of the container (useful when containers are continuously restarting)
+
+### Running commands in containers with exec
+
+* `kubectl exec <pod-name> <commands>`: to execute command in the context of the container
+* `kubectl exec -it <pod-name> <commands>`: to get an interactive sesión
+
+### Copying files to and from Containers
+
+* `kubectl cp <pod-name>:<remote-path> <local-path>`: to copy files from the Pod to the local machine
+* `kubectl cp <pod-name>:<local-path> <remote-path>`: to copy flies from the local machien into a Pod
+
+## Health Checks
+
+* When a application was running as a container in Kubernetes, it is automatically kept alive using a `proces health check`, which ensures that the main process of the application is always running
+* Liveness health checks run application-specifi logic to verify that the application is not just stil running, but is functioning properly
+* They have to be defined in the Pod manifest, since they are application-specific
+
+### Liveness Probe
+
+* Livees probes are defined per container, which means each container inside a Pod is healthy-checked separately
+
+```
+apiVersion: v1
+kind: Pod
+metadata: 
+	name: …
+spec:
+	containers:
+		- image: ...
+		  name: …
+		  livenessProbe:
+			httpGet:
+				path: /healthy
+				port: 8080
+			initialDelaySeconds: 5
+			timeoutSeconds: 1
+			periodSeconds: 10
+			failureThreshold: 3
+...
+```
+
+### Readiness Probe
+
+* Liveness determines if an application is running properly, containers that fail liveness checks are restarted
+* Readiness describes when a container is ready to serve user requests, containers that fail readiness checks are removed from service load balancers
+
+### Types of Health Checks
+
+* Kubernetes support HTTP checks and TCP socket checks through tcpSocket health checks
+* Kubernetes allows `exec` probes. These execute a script or program in the context of the container
+* Following typical convention, if this script returns a zero exit code, the probe sucedes, otherwise, it fails
+
+## Resource Management
+
+* Kubernetes allow increase the overall utilization of the compute nodes that make up a cluster
+* `Utilization` is defined as the amount of a resource actively being used divided by the amount of a resource that has been purchased
+* Kubernetes allows users to specify two different resource metrics.
+	* `requests`: specify the mínimum amount of a resource required to run the application
+	* `limits`: specify the máximum amount of a resource that an application can consume
+
+### Resource Request
+
+* Kubernets guarantees that the resources required to run a Pod are available to it. 
+* The most commonly requested resources are CPU and memory
+
+```
+apiVersion: v1
+kind: Pod
+metadata: …
+spec:
+	containers:
+		- image: …
+		  name: …
+		  resources:
+			requests:
+				cpu: "500m"
+				memory: "128Mi"
+		…
+```
+
+* The Kubernetes scheduler will ensure that the sume of all request of all Pods on a node does not exceed the capcity of the node. Therefore, a Pod is guaranteed to have at least the requested resources when running on the node
+*  "request" specifies a minimun, it does not specify a máximum cap on the resources a Pod may use
+
+### Capping resource usage with limits
+
+* via resource `limits` a maximum can be set
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+	name: kuard
+spec:
+	containers:
+		- image: gcr.io/kuar-demo/kuard-amd64:blue
+ 		name: kuard
+		resources:
+			requests:
+ 				cpu: "500m"
+ 				memory: "128Mi"
+			limits:
+ 				cpu: "1000m"
+ 				memory: "256Mi"
+	...
+```
+
+## Persisting Data with Volumes
+
+* When a Pod is deleted or a container restarts, any and all data in the container's filesystem is also deleted
+
+### Using Volumes with Pods
+
+* `spec.volumes` section: This array defines all of the volumes that may be accessed by containers in the Pod manifest
+* `volumeMounts` array in the container definition: This array defines the volumes that are mounted into a particular container, and the path where each volumen should be mounted
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+	name: kuard
+spec:
+	volumes:
+		- name: "kuard-data"
+		hostPath:
+			path: "/var/lib/kuard"
+	containers:
+		- image: gcr.io/kuar-demo/kuard-amd64:blue
+		  name: kuard
+		  volumeMounts:
+			- mountPath: "/data"
+			  name: "kuard-data"
+	… 
+```
+
+### Different ways of using Volumes with Pods
+
+* Communication/synchronization: Two containers used a shared volumen to serve a site. To achieve this, the Pod uses an emptyDir volume
+* Cache: An application may use a volumen that is valuable for performance, but not required for correct operation of the application. When we want such a cache to survive a container restart due to health-check failure, the emptyDir volumen works well
+* Persistent Data: A volumen for truly persistent data, data that is independent of the lifespsan of a particular Pod, and should move between nodes in the cluster if a node fails or a Pod moves to a different machine for some reason. Kubernetes supports a wide varierty of remote network storage volumes as well as cloud provider network storage
+* Mounting the host filesystem: Some applications don't actually need a persistent volumen, but they do need some Access to the underlying host filesystem. For these cases, Kubernetes supports the hostPath volumen, which can mount arbitrary locations on the worker node into the container
+* Persisting Data Using Remote Disks: Often , we want the data a Pod is using to staty with the Pod, even if it is restarted on a diferent host machine. To achieve this, we can mount a remote network storage volumen into our Pod. When using network-based storage, k8s automatically mounts and unmounts the appropiate storage whenever a Pod using that volumen is scheduled onto a particular machine. Kubernetes includes support for standard protocols such as NFS and iSCSI as well as cloud provider–based storage APIs for the major cloud providers
