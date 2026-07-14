@@ -32,3 +32,50 @@
 * `kubectl get deployments --select="key1"`: list all deployments with the key1 label set to anything
 
 ### Label Selectors in API objects
+
+* A k8s object uses a label selector to refer to a set of other k8s objects
+* `key1=value1, key2 in (value2, value3)` would be converted to 
+
+```
+selector:
+	matchLabels:
+		key1: value1
+	matchExpressions:
+		- { key: key2, operator: In, values: [value2, value3] }
+```
+
+* The older form `key1=value1,key2=value2` would be represented like this;
+
+```
+selector:
+	key1: value1
+	key2: value2
+```
+
+### Labels in the Kubernetes architecture
+
+* Kubernetes is a purposefully decoupled system. There is no hierarchy and all components operate independently
+* In many cases objects needs to relate to one another, and these relationships are defined by labels and label selector
+* Cases where labels are used
+	* ReplicaSets, which create and maintain multiple replicas of a Pod, find the Pods that they are managing via a selector
+	* A service load balancer find the Pods to which it should bring traffic via a selector query
+	* When a Pod is created, it can use a node selector to identify a particular set of nodes onto which it can be scheduled
+	* When people want to restrict network traffic in their cluster, they use NetworkPolicy in conjunction with specific labels to identify Pods that should or should not be allowed to communicate with each other
+
+## Annotations
+
+* Annotations provide a place to store additional metadata for Kubernetes objects where the sole purpose of the metadata is assisting tools and libraries
+* While labels are used to identify and group objects, annotations are used to provide extra information about where an object came from, how to use it, or policy around that object
+* Annotations are used in various places in Kubernetes, with the primary use case being rolling deployments. During rolling deployments, annotations are used to track rollout status and provide the necessary information required to roll back a deployment to a previous state
+
+### Defining Annotations
+
+* Because the annotations are often used to communicate information between tools, the "namespace" part of they key is more important
+* The value component of an annotation is a free-form string field. This allows maximum flexibility and not have validation
+* Annotations are defined in the common `metadata` section in every k8s object
+
+```
+metadata:
+	annotations:
+		example.com/icon-url: "https://example.com/icon.png"
+```
