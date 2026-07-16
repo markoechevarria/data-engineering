@@ -149,4 +149,36 @@ SELECT
 FROM playground.successors
 ORDER BY birthday
 
--- 11. 
+-- 11. Top Reviewed Customers per Product
+-- Using the table playground.product_reviews, write a SQL query to identify, for each product, 
+-- the customer who provided the highest review score. If there are ties in review score, 
+-- the customer with the most helpful votes should be considered top. The output should include 
+-- columns for product_id, customer_id, review_score, and helpful_votes, capturing the details 
+-- of the top review for each product ordered in ascending order of product_id
+
+WITH RankedReview AS ( SELECT 
+  product_id,
+  customer_id,
+  review_score,
+  helpful_votes,
+  ROW_NUMBER() OVER( 
+    PARTITION BY product_id
+    ORDER BY review_score DESC, helpful_votes DESC
+  ) AS ranki
+FROM playground.product_reviews )
+  
+SELECT
+  product_id,
+  customer_id,
+  review_score,
+  helpful_votes
+FROM RankedReview
+WHERE ranki = 1
+ORDER BY product_id
+
+-- 12. Find US Customers Who Rented and Streamed Videos in Early February
+-- Write a SQL query to return the US customers who rented a video on February 1st, 2023, 
+-- and then streamed the same video between February 2nd and February 8th, 2023. 
+-- Use the tables playground.rental for rental data and playground.streams for streaming data. 
+-- The output should include unique user IDs of these customers ordered in ascending order.
+
