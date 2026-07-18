@@ -182,3 +182,21 @@ ORDER BY product_id
 -- Use the tables playground.rental for rental data and playground.streams for streaming data. 
 -- The output should include unique user IDs of these customers ordered in ascending order.
 
+
+COMMING SOON
+
+-- 16. Running total amount	
+-- Write a query that returns each row with a running total 
+-- of amount per salesperson ordered by sale_date.
+
+SELECT 
+  sale_id,
+  salesperson,
+  sale_date,
+  amount,
+  SUM(amount) OVER(
+    PARTITION BY salesperson
+    ORDER BY sale_date
+  ) AS running_total
+FROM bootcamp.sales 
+ORDER BY salesperson
