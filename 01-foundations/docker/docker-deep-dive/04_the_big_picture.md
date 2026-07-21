@@ -12,26 +12,26 @@
 
 * Images are objects that contain everything an app needs to run ( OS, filesystem, the application and all dependencies).
 * `docker images`: list images in the machine
-* `docker pull image-name`: copy new images onto the Docker host, it is called pulling
+* `docker pull <image-name>`: copy new images onto the Docker host, it is called pulling
 
 ### Start a container from the image
 
-* `docker run image-name`: to start a new container from a image
-    * `--name container-name`: told Docker to call this container with a specific alias name.
+* `docker run <image-name>`: to start a new container from an image
+    * `--name <container-name>`: told Docker to call this container with a specific alias name.
     * `-d`: told Docker to start the container in the backgound ( detached mode).
-    * `-p host-port:container-port`: told Docker to map port `container-port` on the container to `host-port` on the Docker host
+    * `-p <host-port>:<container-port>`: told Docker to map port `<container-port>` on the container to `<host-port>` on the host
 * `docker ps`: list the running containers
     * It list the Container ID, Image name, Command to start the app inside the container, the time since the container was created, the status, the mapping ports, and the name of the app.
 
 ### Execute a command inside the container
 
-* `docker exec -it container-name bash-command`: attach the shell fo a new Bash process inside the container
+* `docker exec -it <container-name> <bash-commands>`: attach the shell fo a new Bash process inside the container
 * `exit`: to terminate the bash process and connect the shell back to the local terminal
 
 ### Delete the container
 
-* `docker stop container-name`: Stop the container
-* `docker rm container-name`: Kill the container
+* `docker stop <container-name>`: Stop the container
+* `docker rm <container-name>`: Kill the container
 
 ## The Devs perspective
 
@@ -42,15 +42,15 @@
 ### Containerize the app
 
 * `docker build .`: to create a new image based on the insructions in the Dockerfile located in the current directory.
-    `-t container-name:version`: it names the image as `container-name` and assign the version `version`
+    `-t <container-name>:<version>`: it names the image as `<container-name>` and assign the version `<version>`
 
 ### Run the app as a container
 
-* `docker run image-name`: start a container
+* `docker run <image-name>`: start a container from an image
     * `-d`: run in detached mode
-    * `--name container-name`: container name
-    * `--publish host-port:container-port`: told Docker to map port `container-port` on the container to `host-port` on the Docker host
+    * `--name <container-name>`: container name
+    * `-p <host-port>:<container-port>`: told Docker to map port `<container-port>` on the container to `<host-port>` on the host
 
 ### Clean Up
 
-* `docker rm name-container -f`: terminate the container and delete the image
+* `docker rm <name-container> -f`: terminate the container and delete the image
