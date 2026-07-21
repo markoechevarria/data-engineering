@@ -15,28 +15,23 @@
 ## Hello Containers
 
 * Every container shares the OS of the host it is running on. A single host can run more containers than VMs.
+* This frees up huge amounts of system resources such as CPU, RAM, and storage.
+* Containers are fast to start and ultra-portable.
 
 ## Linux Containers
 
 * Containers started in the Linux world and are the product of incredible work from many people over many years.
-* Technologies underpinning modern containers include kernel namespaces, control groups (cgroups) and capabilities.
+* Some of the major technologies that enabled the massive growth of containers in recent years include; `kernel namespaces`, `control groups`, `union filesystems`, and Docker.
 
 ## Hello Docker
 
 * Docker was the magic that made Linux containers easy and brougth them to the masses.
 
-## Docker and Windows
-
+## Docker and Windows, Linux and Mac
+* Containers share the kernel of the host they are running on.
 * Windows containers run Windows Apps and require a host system with a Windows Kernel.
 * Windows systems also can run Linux containers via the WSL (windows Subsystem Linux) subsystem.
-
-### Windows containers vs Linux containers
-
-* Containers share the kernel of the host they are running on.
-
-### Mac Containers
-
-* There is no such thing as Mac containers.
+* A containerized application designed to run on a host with a Windows kernel will not run on a Linux host.
 * The most popular way of working with with containers on a Mac is Docker Desktop. It works by running Docker inside a lightweight Linux VM on Mac.
 
 ## Wasm
@@ -53,4 +48,3 @@
 ## What about Kubernetes
 
 * Kubernetes is the industry standard platform for deploying and managing containerized apps.
-* All Docker containers work in Kubernetes
