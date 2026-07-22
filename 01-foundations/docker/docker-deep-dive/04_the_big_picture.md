@@ -42,7 +42,7 @@
 ### Containerize the app
 
 * `docker build .`: to create a new image based on the insructions in the Dockerfile located in the current directory.
-    `-t <container-name>:<version>`: it names the image as `<container-name>` and assign the version `<version>`
+    * `-t <container-name>:<version>`: it names the image as `<container-name>` and assign the version `<version>`
 
 ### Run the app as a container
 
