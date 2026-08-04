@@ -108,12 +108,12 @@
 
 ## Commands
 
-• `docker run <image>` is the command to start new containers. You give it the name of an image and it starts a container from it. 
-• `Ctrl-PQ` is how you detach from a container without killing the process you’re attached to. 
-• `docker ps` lists all running containers, and you can add the -a flag to also see containers in the stopped (Exited) state.
-• `docker exec` allows you to run commands inside containers.
-• `docker stop` stops a running container and puts it in the Exited (137) state. It issues a SIGTERM to the container’s PID 1 process and allows the container 10 seconds to gracefully quit. If the process hasn’t cleaned up and stopped within 10 seconds, it sends a SIGKILL to force the container to terminate immediately.
-• `docker restart` restarts a stopped container.
-• `docker rm` deletes a stopped container. You can add the -f flag to delete the container without having to stop it first.
-• `docker inspect` shows you detailed configuration and run-time information about a container.
-• `docker debug` attaches a debug shell to a container or image and lets you run commands that aren’t available inside the container or image. It requires a Pro, Team, or Business Docker subscription.
+* `docker run <image>` is the command to start new containers. You give it the name of an image and it starts a container from it. 
+* `Ctrl-PQ` is how you detach from a container without killing the process you’re attached to. 
+* `docker ps` lists all running containers, and you can add the -a flag to also see containers in the stopped (Exited) state.
+* `docker exec` allows you to run commands inside containers.
+* `docker stop` stops a running container and puts it in the Exited (137) state. It issues a SIGTERM to the container’s PID 1 process and allows the container 10 seconds to gracefully quit. If the process hasn’t cleaned up and stopped within 10 seconds, it sends a SIGKILL to force the container to terminate immediately.
+* `docker restart` restarts a stopped container.
+* `docker rm` deletes a stopped container. You can add the -f flag to delete the container without having to stop it first.
+* `docker inspect` shows you detailed configuration and run-time information about a container.
+* `docker debug` attaches a debug shell to a container or image and lets you run commands that aren’t available inside the container or image. It requires a Pro, Team, or Business Docker subscription.
