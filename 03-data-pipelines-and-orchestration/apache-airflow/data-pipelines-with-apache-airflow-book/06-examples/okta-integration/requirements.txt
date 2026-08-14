@@ -1,0 +1,12 @@
+boto3==1.41
+apache-airflow==2.11.0
+apache-airflow-providers-amazon==9.0.0
+apache-airflow-providers-postgres==6.6.3
+datadog==0.50.1
+jira==3.8.0
+paramiko==3.5.0
+cachetools==5.5.0
+pyotp==2.9.0
+smart_open==7.1.0
+slack_sdk==3.33.3
+pandas==2.1.4
