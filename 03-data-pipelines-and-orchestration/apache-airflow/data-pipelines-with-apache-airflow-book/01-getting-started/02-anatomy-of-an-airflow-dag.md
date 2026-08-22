@@ -1,4 +1,8 @@
-## Anatomy of an Airflow DAG
+# 02. Anatomy of an Airflow DAG
+
+## Writting a Airflow DAG
+
+* Airflow allows split a large job, which consists of one or more steps, into individual “tasks” that together form a DAG. Multiple tasks can be run in parallel, and tasks can run different technologies
 
 Workflow in Airflow are represented in DAGs
 Operators represent a single unit of work
