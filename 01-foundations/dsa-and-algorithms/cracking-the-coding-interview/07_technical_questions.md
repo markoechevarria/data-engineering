@@ -63,6 +63,14 @@
 
 ## Optimize and Solve Tecnique: Look for BUD
 
-* Bottlenecks
+* Bottlenecks: A bottleneck is a part of an algorithm that slows down the overal runtime
 * Unnecessary working
 * Duplicated work
+
+## Optimize and Solve Tecnnique: DIY
+
+* Use a nice, big example and intuitively-manually, that is-solve it for the specific example. Then, afterwards, think hard about how you solved it. Reverse engineer your own approach.
+
+## Optimize & Solve Technique #3: Simplify and Generalize
+
+
