@@ -1,7 +1,6 @@
 # AWS global infraestructure
 
-* AWS is a collection of smaller groupings of infraestructure connected together by a global high speed network 
-* Some services are deployed individually in each region and others act from a global perspective
+* AWS is a collection of smaller groupings of infraestructure connected together by a global high speed network * Some services are deployed individually in each region and others act from a global perspective
 
 ## AWS Regions
 
@@ -15,6 +14,7 @@
 
 * Are much smaller than regions
 * Generally only have content distribution services and some types of edge computing
+* They are located in many more places than regions
 
 ## Availability Zone (AZ)
 

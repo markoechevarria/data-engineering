@@ -1,10 +1,11 @@
 # Identify and Access Management (IAM) Basics
 
 * The root user associated with the AWS account, and has full unrestricted access to tha account
-* In most real-world situations is wanted to granted access to all people on the organization access to the AWS account, and is wanted to restrict this access based on persons, groups and applications. This is called List Privilege Access
+* In most real-world situations is wanted to granted access to all people on the organization access to the AWS account, and is wanted to restrict this access based on persons, groups and applications. This is called Least Privilege Access
 
-* IAM does not have cost
+* Each AWS account comes with its own running copy of IAM
 * IAM is an globally resiliant service, any data is secure accross all AWS regions
+* IAM does not have cost
 * IAM let the Root user do anything on the account
 * Inside IAM other identities can be created, and them can be granted some access 
 
