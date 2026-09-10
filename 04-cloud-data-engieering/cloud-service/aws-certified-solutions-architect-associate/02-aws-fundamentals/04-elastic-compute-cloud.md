@@ -2,8 +2,7 @@
 
 * IAAS: Infraestructure as a Service
 * Provides access to virtual machines known as EC2 instances
-* Is a private service by-default 
-* Uses VPC networking
+* Is a private service by-default and uses VPC networking
 * EC2 is AZ resilient
 * Different instance sizes and capabilities
 * Local on-host storage (EC2 Instance Store) or Elastic Block Store (EBS)
@@ -31,14 +30,14 @@
 
 * Is an image of an EC2 instance
 * An AMI can be used to create an EC2 instance or an AMI can be created from an EC2 instance
-* AMI components:
-    * Permissions: 
+* AMI contains:
+    * Attached Permissions: 
         * Public: everyone allowed
         * Owner: Implicit allow
         * Explicit: specific AWS accounts allowed
     * Root Volume: 
         * The drive that boots the operating system
-        * Can contains other volumes, extra drives 
+        * Can contains other volumes, extra drives, but it will always have at least one, the Boot Volume
     * Block device mapping:
         * Links the volumes that the AMI has, and how they are presented to the Operating System
         * It determines which volume is the boot volume and which volume is a data volume
@@ -48,3 +47,4 @@
 * EC2 can run differente operating systems
 * To connect to Windows intances, the RDP is used via the port 3389
 * To connect to Linux instances, the ssh protocol is used via port 22
+
