@@ -27,10 +27,7 @@
 
     8. Outputs: Once the template is finished, it can present output based on what's being created
 
-* Resources inside a template are called logical resources
-    * A logical resource has a type
-    * Logical resouces have properties
-
+* Resources inside a template are called logical resources which have a type and properties
 * CloudFormation use the template to cretes a stack (which contains all logical resources)
 * When a Cloudformation use a template to crete a stack
     * Cloudformation scans the template

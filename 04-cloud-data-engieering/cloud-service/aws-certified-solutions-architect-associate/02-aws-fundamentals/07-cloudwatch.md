@@ -15,7 +15,7 @@
 
 ## Namespace
 
-* A container for monitoring data
+* A container for monitoring data, it's a way to separate things into different areas
 * Namespaces have a name
 * All AWS data goes into an AWS namespace, which is called AWS/ and the service name
 
@@ -36,3 +36,4 @@
 ## Alarms
 
 * Are linked to specific metrics, and based in how they are configured they will take an action based on that metric
+* There are three possible states: OK, ALARM and INSUFFICIENT_DATA

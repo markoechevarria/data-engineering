@@ -1,9 +1,9 @@
 # Route53
 
 * Allows register domains
-* Can host zone files on manage name serves
-* It's a global service with a single database
-* Is globally resilient
+* Can host zone files on managed name serves
+* It's a global service, globally resiient with a single database
+* Is globally resilient and global service
 
 ## Allow register domains
 
@@ -14,7 +14,7 @@
 * When a domain is registered
     * Route 53 checks with the registry for that top level domain if the domain is available
     * Route 53 creates a zone file (a database which contains all of the DNS information for a particular domain) for the domain being registered
-    * Route 53 allocates name service for this zone. Serves which Route 53 creates and manages which are distributed globally and there are generally four for one individual zone
+    * Route 53 allocates name services for this zone. Serves which Route 53 creates and manages which are distributed globally and there are generally four for one individual zone
     * Route 53 takes the zone file (known as a hosted zone) and put it onto the name servers
     * Route 53 communicates with the registry and adds these name server records into the zone file for the top level domain
 
@@ -58,7 +58,3 @@
 * It's a numeric value in seconds
 * Indicates how longer records can be cached for, what ammount of type is appropiate
 * TTL are normally mandatories, but can be ignored
-
-
-
-

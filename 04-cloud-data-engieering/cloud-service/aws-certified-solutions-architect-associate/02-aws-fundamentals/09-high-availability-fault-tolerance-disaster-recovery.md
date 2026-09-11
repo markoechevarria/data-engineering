@@ -2,7 +2,7 @@
 
 ## High Availability
 
-* Aims to ensure an agreed level of operational performance usually uptime, for a higher than normal period
+* Aims to ensure an agreed level of operational performance, usually uptime, for a higher than normal period
 * A highly available system is one designed to be online and providing services as often as possible
 * A highly available system its designed, so that when it fails its components can be replaced or fixed as quickly as possible, often using automation to bring systems back into service
 
