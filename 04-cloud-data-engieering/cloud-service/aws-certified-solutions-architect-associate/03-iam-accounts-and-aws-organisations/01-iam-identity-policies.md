@@ -1,12 +1,11 @@
 # Identity Policies
 
-* IAM policies are a type of policy which get attached to identities inside AWS
-* Identities are IAM users, IAM groups, and IAM roles
+* IAM policies are a type of policy which get attached to identities (IAM users, IAM groups and IAM roles) inside AWS
 * IAM policies deny or allow access to AWS products and features to any identity which uses that policy
 
 * When an identity attempts to access AWS resources that identity needs to prove who it is to AWS
 * AWS knows which policies an identity has and has a list of all statements which apply to a given identity
-* AWS then works through all of the statements one by one and it reviews any that apply to a particular identity accessing a particular resource in a particular way
+* AWS works through all of the statements one by one and it reviews any that apply to a particular identity accessing a particular resource in a particular way
 
 ## Statements
 
@@ -31,4 +30,4 @@
     * Reusable: Can be attached to multiple users, groups, or roles at the same time
     * There are two types:
         * AWS managed policies: Managed by AWS, cannot be edited or deleted
-        * Customer managed policies custom standalone policies created inside an AWS account, can be written, edited and version-controled via JSON
+        * Customer managed policies: created inside an AWS account, can be written, edited and version-controled

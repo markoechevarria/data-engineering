@@ -1,0 +1,4 @@
+AWSTemplateFormatVersion: 2026-09-15
+Description: A demostration for AWS IAM section
+Resources:
+
