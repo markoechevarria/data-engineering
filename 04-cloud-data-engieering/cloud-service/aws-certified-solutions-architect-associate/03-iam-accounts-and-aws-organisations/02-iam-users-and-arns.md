@@ -11,8 +11,8 @@
 * Authentication is how a principal can prove to IAM that it is the identity that it claims to be
 * Authorization is IAM checking the statements that apply to that identity and either allowing or denying that access
 
-* 5000 IAM users per account
-* IAM User can be a member of 10 groups
+* There's a limit of 5000 IAM users per account
+* IAM User can be a member of max 10 groups
 * When limits are reached, IAM roles or Identity federation can be used, it means using own existing identities rather than using IAM users
 
 # Amazon Resource Names (ARNs) 

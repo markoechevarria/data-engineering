@@ -16,9 +16,7 @@
 
 ## Effect Priorities
 
-* Explicit deny: have the first priority
-* Explicit allow: have the second priority
-* Default deny (implicit): last priority
+* Explicit deny >> Explicit allow >> Default deny (implicit)
 
 ## Type of policies
 

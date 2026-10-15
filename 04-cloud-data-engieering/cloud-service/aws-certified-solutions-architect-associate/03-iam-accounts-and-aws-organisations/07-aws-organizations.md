@@ -1,7 +1,7 @@
 # AWS Organizations
 
 * Is a product which allows larger businesses to manage multiple AWS accounts in a cost-effective way
-* Without AWS organizations many large business faced a situtation where they need to manage many AWS accounts
+* Without AWS organizations many large business faced a situation where they need to manage many AWS accounts
 
 * An standard account is used to create an organization within AWS, this becomes the Management Account (formerly Master Account) for the organization
 * The Management account can invite other exist standard AWS accounts into the organization, so they become Member Accounts of that organization
