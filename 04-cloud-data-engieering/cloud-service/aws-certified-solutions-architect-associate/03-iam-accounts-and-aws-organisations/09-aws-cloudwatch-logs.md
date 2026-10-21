@@ -1,12 +1,12 @@
 # CloudWatch Logs
 
 * Public Service: usable from AWS or on-premises
+* It's a regional service
 * Store, monitor and access logging data (a piece of information data and a timestamp)
 * AWS integrations: EC2, VPC Flow Logs, Lambda, CloudTrail, R53 and more
 * Any service which integrate with CloudWatch Logs can store data directly and the security is provided by using IAM roles or service roles
 * To integrate external services/apps it's needed to use CloudWatch agent 
 * Can generate metrics based on logs, this is known as metric filter
-* It's a regional service
 
 ## Architecture
 
