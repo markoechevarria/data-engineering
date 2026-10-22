@@ -16,7 +16,6 @@
                 * Log Archive Account: for users that need access to all logging information (AWS Config and AWS CloudTrail are stored within this account)
             * A custom OU called Sandbox
                 * Used for testing and less rigid security situations
-
     * Guard Rails: 
         * Detect/mandate rules/standards across all accounts
         * There are three types: Mandatory, Strongly Recommended, Elective
@@ -24,13 +23,11 @@
             * Are Enforced or Not enabled 
         * Detective: compliance checks, uses AWS Config rules and allows the user to check that the configuration of a given thing matches what's defined as best practice
             * Are clear, in violation or not enabled
-
     * Account Factory
         * Automates and Standardises account provisioning inside the custom OU
         * AWS CloudFormation is used to manage the creation of the accounts
         * AWS Config and Service Control Policies are used to implement account guardrail automatically
         * Accounts can be closed or repurposed
         * Can be fully integrated with a businessed SDLC (Software Development Life Cycle)
-
     * Dashboard
         * Single page oversight of the entire environment

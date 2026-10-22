@@ -9,7 +9,7 @@
     * Insight Events
 * CloudTrail Trail
     * Is the unit of configuration within the CloudTrail product
-    * Is how S3 and CWLogs are configured
+    * Is how S3 and CloudWatchLogs are configured
     * It's neccesary to create one or more Trails to customize the CloudTrail service
 * CloudTrail is a regional service, but can be configured to work on two ways
     * One-region trail: logs evenst for the region that it's created in
@@ -19,7 +19,6 @@
 * Logs are stored as a set of compressed JSON log files
 * Cloudtrail can be integrated with CloudWatch logs and the data can be stored in that product
 * It's not realtime: there is a delay of roughly 15 minutes
-
 * Organizational CloudTrail Trail
     * Can be created from the management account of an organization
     * Store all information for all of the accounts inside the organization
