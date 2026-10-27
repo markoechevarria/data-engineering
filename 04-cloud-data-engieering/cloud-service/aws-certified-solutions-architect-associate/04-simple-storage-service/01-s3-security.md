@@ -7,3 +7,4 @@
 * A resource policy
 * ALLOW/DENY same or different accounts
 * ALLOW/DENY anonymous principals 
+* Their document policies have the field "Principal" which refers to the principal who will be affected
