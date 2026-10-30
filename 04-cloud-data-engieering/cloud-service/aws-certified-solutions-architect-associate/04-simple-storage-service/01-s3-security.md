@@ -23,4 +23,6 @@
 * They are applied no matter what the resource policy says
     1. Block all public access
     2. Block public access to buckets and objects granted through new access control lists (ACLs)
-    3. Block any public access granted by ACLs
+    3. Block any public access granted by ACLs including existing ones
+    4. Block public access to buckets and objects granted through new public bucket or access point policies
+    5. Block public and cross-account access to buckets and objects granted through any public bucket or access point policies
