@@ -8,7 +8,17 @@
 * Is capable of performing cryptographic operations (encrypt, decrypt, ...)
 * Keys never leaves KMS
 * Provides FIPS 140-2 (L2) compliant service
-* Support multi-region keys
+* Support multi-region keys, where keys are replicated to other AWS regions
+* Keys are either AWS owned or customer owned
+    * AWS owned keys are a collection of KMS keys that an AWS service owns and manages for use in multiple AWS accounts
+    * Customer Owned Keys
+        * AWS managed: are created automatically by AWS when services such as S3 are used
+        * Customer managed: are created explicitly by the customer to use directly in an application or within an AWS service. They are more configurable
+* KMS keys support rotation, where physical backing material (the data used) is changed
+* KMS keys contains the `Backing Key`, the physical key material and all previous backing keys caused by rotation
+* Aliases for keys can be created, they are per region
+* The account trust for KSM should be explicitly added on a key policy or not
+* Key policies are a type of Resource Policy added individually to each key
 
 ## KMS keys
 
