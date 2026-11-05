@@ -5,11 +5,12 @@
 
 ## AWS Regions
 
-* Is an area of the world and inside is a full deployment of AWS infraestructure
+* Is a separate geographical area containing multiple Availability Zones
+* It does not necessarily contain every AWS service or the entirety of AWS infrastructure
 * Benefits:
-    * Geographic separation: Isolated Fault Domain
-    * Geopolitical separation: Different governance
-    * Location control: Performance
+    * Geographic separation: Regions are isolated from failures affecting other Regions
+    * Geopolitical separation: Helps satisfy regulatory, legal, and data residency requirements
+    * Location control: Lets you deploy resources closer to users, reducing latency
 
 ## AWS Edge Locations
 
@@ -20,14 +21,19 @@
 ## Availability Zone (AZ)
 
 * Isolated Infraestructure inside a region
-* Is logical thing inside AWS
+* Is not merely a logical concept. It represents one or more discrete data centers with independent power, networking, and connectivity
 * AWS could span services across many AZs to make them resilient
 
 ## Service Resilience
 
 * Globally Resilient
-    * Services operates globally with a single database, and its data is replicated across multiple regions
+    * Services with a global control plane or global endpoint
+    * They may operate across multiple Regions or provide globally distributed infraestructure
+    * Their data replication and availability models depend on the specific service
 * Region Resilient
-    * Services which operates in a single region with one set of data per region
+    * Services whose resources are managed within a particular Region
+    * Their resources and data are generally isolated from other Regions unless you explicitly configure cross-Region replication or another resilience mechanism
 * AZ resilient
-    * Services that are run from a single AZ
+    * Resources deployed in a single AZ are AZ-Scoped
+    * An application deployed across multiple AZs can be AZ-resilient if it is designed to continue operating when one AZ fails
+
