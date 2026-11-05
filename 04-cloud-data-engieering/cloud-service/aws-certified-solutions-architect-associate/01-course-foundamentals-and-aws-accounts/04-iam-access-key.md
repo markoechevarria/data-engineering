@@ -1,7 +1,7 @@
 # Iam Access key
 
-* Authentication via command line is done using IAM access key
-
+* Authentication via command line can be done using IAM access key
+* Are refered as long-term credentials
 * An IAM user has 1 username and 1 password
 * An IAM user can have two access key
 * Access keys can be created, deleted, made inactive or made active
