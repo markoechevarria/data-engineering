@@ -1,6 +1,5 @@
 # S3 Performance Optimization
 
-
 ## Multipart Upload
 
 ### Problem

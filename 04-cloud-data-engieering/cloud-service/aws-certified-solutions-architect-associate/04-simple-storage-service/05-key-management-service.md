@@ -17,8 +17,8 @@
 * KMS keys support rotation, where physical backing material (the data used) is changed
 * KMS keys contains the `Backing Key`, the physical key material and all previous backing keys caused by rotation
 * Aliases for keys can be created, they are per region
-* The account trust for KSM should be explicitly added on a key policy or not
 * Key policies are a type of Resource Policy added individually to each key
+* The account trust for KSM should be explicitly added on a key policy or not
 
 ## KMS keys
 
@@ -41,4 +41,3 @@
     * Ciphertext version: The Data Encryption Key is encrypted in KMS, this version can be given back to KMS for it to be decrypted
 * KMS doesn't do the encryption or decryption of the date, that operation is performed by the user or service which is using KMS
 * To decrypt the encrypted data, the encrypted data encryption key is given back to KMS, and using the same KMS key used to generate it, the plaintext version is retrieved. That decrypted version is then used to decrypt the data. After finished the use of that version it should be discarded
-* 
