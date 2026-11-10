@@ -15,17 +15,3 @@
 2. The principal makes requests to IAM to interact with resources. It needs to authenticate against an identity within IAM
 3. The principal is now known as an authenticated identity
 4. Once the principal becomes an authenticated identity then AWS knows which policies apply to the identity
-
-# Amazon Resource Names (ARNs) 
-
-* Uniquely identify resources within any AWS accounts
-* ARNs allows refers to a single resource or in some cases, a group of resources using wild cards
-* ARNs can always identify single resources, whether they're individual resources in the same account or in different accounts
-
-```
-arn:partition:service:region:account-id:resource-id
-arn:partition:service:region:account-id:resource-type/resource-id
-arn:partition:service:region:account-id:resource-type:resource-id
-arn:aws:s3:::bucket-name        # this refers to the bucket
-arn:aws:s3:::bucket-name/*      # this refers to the objects in the bucket
-```

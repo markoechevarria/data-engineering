@@ -14,13 +14,14 @@
 
 ## Namespace
 
-* A container for monitoring data, it's a way to separate things into different areas
-* Namespaces have a name
+* A container with a name for monitoring data, it's a way to separate things into different areas
 * All AWS data goes into an AWS namespace, which is called AWS/ and the service name
 
 ## Metric
 
+* Uniquely defined by the combination of its Name, its Namespace and its Dimension
 * A collection of related data points in a time ordered structure
+* A metric is a time-ordered set of data points
 
 ## Datapoint
 
