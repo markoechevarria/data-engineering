@@ -5,12 +5,13 @@
 * Is a private service by-default and uses VPC networking
 * EC2 is AZ resilient
 * Different instance sizes and capabilities
+* On-demand billing per second
 * Local on-host storage (EC2 Instance Store) or Elastic Block Store (EBS)
 * Resources:
-    * CPU: determines how much processing can be achieved
-    * Memory: fast are to store data that's currently being worked on by the instance
-    * Disk: where medium-term data is stored
-    * Networking: how the instances communicate with other entities
+    * CPU: processing power for running applications, operating system tasks, etc
+    * Memory: fast temporary storage for active data, apps, and OS processes
+    * Disk: persistent storage for the operating system, apps, and data
+    * Networking: connectivity to other AWS resources, services, and the internet (when allowed)
 
 ## Instance Lifecycle
 

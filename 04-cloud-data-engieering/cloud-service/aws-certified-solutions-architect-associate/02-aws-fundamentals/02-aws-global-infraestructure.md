@@ -21,7 +21,7 @@
 ## Availability Zone (AZ)
 
 * Isolated Infraestructure inside a region
-* Is not merely a logical concept. It represents one or more discrete data centers with independent power, networking, and connectivity
+* Is not merely a logical concept. It represents one or more discrete data centers with independent power, networking, compute, storage and connectivity
 * AWS could span services across many AZs to make them resilient
 
 ## Service Resilience
@@ -32,8 +32,22 @@
     * Their data replication and availability models depend on the specific service
 * Region Resilient
     * Services whose resources are managed within a particular Region
+    * They generally replicate data to multiple AZs in the region
     * Their resources and data are generally isolated from other Regions unless you explicitly configure cross-Region replication or another resilience mechanism
 * AZ resilient
     * Resources deployed in a single AZ are AZ-Scoped
     * An application deployed across multiple AZs can be AZ-resilient if it is designed to continue operating when one AZ fails
 
+## AWS Local Zone
+
+* AWS infraestructure placed in a major city, as an extension of a parent region
+* Can be thought of as mini-AWS region that allows users to get faster access to services
+* It will only have some AWS servives, like EC2 and Storage
+
+## AWS Wavelength Zone
+
+* AWS infraestructure that is deployed inside a 5G telecoms network
+
+## AWS Outpost
+
+* AWS infraestructure deployed on-premises for hybrid workloads and local residency
