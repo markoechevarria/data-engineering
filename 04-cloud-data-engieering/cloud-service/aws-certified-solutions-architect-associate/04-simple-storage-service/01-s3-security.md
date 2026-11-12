@@ -4,7 +4,7 @@
 
 ## S3 bucket policy 
 
-* A resource policy
+* A resource policy attached to a bucket
 * ALLOW/DENY access on the same or different accounts
 * ALLOW/DENY access to anonymous principals 
 * Their document policies have the field "Principal" which refers to the principal who will be affected

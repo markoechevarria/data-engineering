@@ -28,8 +28,9 @@
 ### Advantage
 
 * Transfer accelartion uses the network of AWS edge locations, which are located in lots of convenient locations globally
-* This configuration needs to be enabled
+* This configuration needs to be enabled at the bucket-level (off by default)
 * Restrictions for enable Accelarated Transfer
     * Bucket name can not contain periods 
     * Needs to be DNS compatible in its naming
 * The uploading go to the closest best performing AWS edge location, and the data is transfered over the AWS global network, which tends to be a direct link
+* Use the accelearte endpoint in the app/client (standard or IPv6)

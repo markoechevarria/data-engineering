@@ -24,4 +24,10 @@
 
 ## How works for Console Access
 
-* 
+* The user authenticate against the on-premises identity store using their corporate credentials
+* the IdP evaluates the user's group membership and maps them to the appropiate AWS IAM role(s) they are permitted to use
+* The IdP generate a signed SAML assertion ( an document containing the user's identity and authorized role ARN) and sends back to the user's browser
+* The browser posts the SAML assertion to the AWS sign-in endpoint for SAML
+* AWS validates the SAML assertion, checks the established trust relationship between the IdP and the IAM SAML provider, and calls the AssumeRoleWithSAMLP API behind the scenes to generate temporary AWS security credentials
+* AWS creates a sign-in token and issues a redirect URL to the browser, establishing an authenticated session for the AWS Management Console
+* The user is securely logged into the AWS Management Console with permissions restricted to the assigned IAM role, valid for up to 12 hours

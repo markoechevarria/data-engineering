@@ -18,3 +18,4 @@
 * When activated MFA is required to change bucket versioning state
 * When activated MFA is required to delete any versions of an object
 * The Serial Number (MFA) and the code that it generates needs to be provided when performing API calls 
+* Is not compatible with S3 Lifecycle Policies
