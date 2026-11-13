@@ -1,1 +1,13 @@
-cd 04-cloud-data-engieering/cloud-service/aws-certified-solutions-architect-associate/
+#/bin/sh
+
+response=$1
+
+if [[ "$response" = "aws" ]]; then
+	echo "Moving to AWS"
+	cd 04-cloud-data-engieering/cloud-service/aws-certified-solutions-architect-associate/
+elif [[ "$response" = "db" ]]; then
+	echo "Moving to Databricks"
+	cd 04-cloud-data-engieering/cloud-service/databricks-certified-data-engineer-associate/
+else
+	echo "Cloud unknown"
+fi
