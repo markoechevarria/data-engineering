@@ -28,7 +28,7 @@
 * There are two types:
     1. All Purpose cluster
         * Is created manually, either through the Databricks UI, the CLI, or the API
-        * Are persistnet, and they can be terminated and restarted at any point in time
+        * Are persistent, and they can be terminated and restarted at any point in time
         * Are suitable for interactive and ad hoc analysis workloads
         * Can be shared among many users, they're well suited for collaborative data analysis
         * Are more expensive to run

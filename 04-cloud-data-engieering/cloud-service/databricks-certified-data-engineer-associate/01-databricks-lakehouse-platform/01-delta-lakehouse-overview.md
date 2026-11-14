@@ -1,6 +1,6 @@
 # Delta Lakehouse overview
 
-* New, open data management architecture that combines the flexibility, cost-efficiency and scale of Data Lakes with the data management and ACID transactions of Data Warehouses, enabling business intelligence (BI) and machine learning (ML) on all data
+New, open data management architecture that combines the flexibility, cost-efficiency and scale of Data Lakes with the data management and ACID transactions of Data Warehouses, enabling business intelligence (BI) and machine learning (ML) on all data
 
 ## Data Warehouse
 
@@ -16,7 +16,7 @@
 * Analysts and business managers could then access the data through BI reports
 * Limitations
     * Increased Data Volume & Variety: data volumes increased dramatically and new type of unstructured data like videos, images and text files became important for decision making
-    * Longer time to Ingest new data: data was only loaded after its quality was checked and transformed, which leds to longer development times to add new data into the DW
+    * Longer time to ingest new data: data was only loaded after its quality was checked and transformed, which leds to longer development times to add new data into the DW
     * Propietary Data Formats/Vendor Lock In: DWs were built on traditional relational databases or massive parallel processing (MPP) engines, which used propietary file formats
     * Scalability Issues: Traditional on premises DWs were hard to scale, sometimes requiring large migrations projects to increase capacity
     * High Storage Costs: Storage was expensive with this traditional solutions, it was impossible to expand storage independently of computing resources
@@ -29,7 +29,7 @@
 * Raw data is ingested directly into the DL without any intial cleansing or transformation (faster ingestion times)
 * Were built on cheap storage solutions like HDFS and cloud object stores such as Amazon S3 and Azure Data Lake Storage Gen2, which kept the costs low
 * They also utilized open source file formats like parquet, ORC and Avro
-* Supported data sciences and machine learnin workloads by providing access to both raw and transformed data
+* Supported data sciences and machine learning workloads by providing access to both raw and transformed data
 * Companies often copied a subset of the data from the DL to a DW because DLs were too slow for interactive BI reports and lacked proper data governance, this leds to a complex architecture with too many moving parts
 * Limitations
     * No support for ACID transactions: No support for Atomicity, Consistency, Isolation and Durability, essential for reliable data management
@@ -45,9 +45,8 @@
 
 ## Data Lakehouse
 
-* Combines the best features of both data warehouses and data lakes
+* Combines the best features of both DWs and DLs
 * Designed to support BI and data science, machine learning and AI workloads
-* Similar to DLs, both operational and external data can be ingested into a DLH
 * A DLH is issentially a DL with built-in acid transactions, controls and data governance capabilities. DLs achieve this using the file format Delta Lake and a data governance solution called Unity Catalog, with ACID support offered by the Delta Lake file format, we can seamlessl combine streaming and batch workloads, eliminating the need for complex Lambda architectures
 * Advantages:
     * Handles All types of data

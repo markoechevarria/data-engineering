@@ -9,7 +9,7 @@
 * Is a lightning-fast unified analytics engineer for big data processing and machine learning
 * Developed at UP Berkeley in 2009 and open sourced in 2010, under Apache License since 2013
 * Was designed to address the limitations of Hadoop, which was slow and infefficient for interactive and iterative computing tasks; in contrast Spark provides simpler and faster APIs that are easier to work with
-* It can be up to 100 times faster than Hadoop, by utilizing in-memory computing and varios optimizations
+* It can be up to 100 times faster than Hadoop, by utilizing in-memory computing and various optimizations
 * Runs on a distributed computing platform
 * Has a unified engine that supports both batch and streaming workloads
 * Includes built-in libraries for SQL queries, machine learning, and graph processing
@@ -22,7 +22,7 @@
 * Optimized Spark Engine: Databricks provides the spark runtime, which is highly optimized for Databricks platform and known to be up to five times faster than vanilla Apache Spark
 * Photon: Databricks comes with a vectorized query engine called photon, which provides extremely fast query performance, up to eight times improvement on the standard Databricks runtime
 * Unity Catalog: Databrikcs enables users to create and manage databases and tables using hive, Metastore, or Unity Catalog. Unity Catalog also supports data lineage and provides improved governance
-* Delta Lake: Offers robut support for asset transactions, which ensures data reliability and integrity
+* Delta Lake: Offers robut support for ACID transactions, which ensures data reliability and integrity
 * Delta Live Tables: A declarative ETL framework that helps create reliable data pipelines with ease
 * Workflows: buil-in feature that helps schedule and orchestrate tasks and pipelines as required
 * SQL Warehouse: Databricks SQL provides a SQL based analytical environment to explore data, create dashboards, schedule a regular refresh of the dashboard, etc

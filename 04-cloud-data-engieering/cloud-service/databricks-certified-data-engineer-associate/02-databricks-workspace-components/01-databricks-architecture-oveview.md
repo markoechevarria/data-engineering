@@ -2,7 +2,7 @@
 
 ## Control Plane
 
-* Handles all the backend services required for the Databricks Platform
+Handles all the backend services required for the Databricks Platform
 1. Databricks User Interface: Where users interact with Databricks through a browser-based interface
 2. Cluster manager: Is responsible for managing and provisioning compute resources when users create clusters or interact with existing clusters to scale them up and down
 3. Unity Catalog: Provides data governance and helps manage access and permissions for the data
