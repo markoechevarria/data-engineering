@@ -28,8 +28,7 @@ A security feature that allows who can use the compute and what data they can ac
 
 ### Databricks Runtime
 
-The set of core libraries that run on Databricks clusters
-Photon can be enabled and disabled, which is a vectorized query engine which accelerated Apache Spark workloads
+Is the set of core libraries that run on Databricks clusters. Photon Acceleration can be enabled and disabled, which is a vectorized query engine which accelerated Apache Spark workloads
 * Databricks Runtime: Includes an optimized version of Apache Spark with various supporting libraries
 * Databricks Runtime ML: Includes popular machine learning libraries such as PyTorh, Keras, Tensorflow, and XGBoost
 
