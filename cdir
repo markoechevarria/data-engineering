@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 response=$1
 
@@ -9,5 +9,5 @@ elif [[ "$response" = "db" ]]; then
 	echo "Moving to Databricks"
 	cd 04-cloud-data-engieering/cloud-service/databricks-certified-data-engineer-associate/
 else
-	echo "Cloud unknown"
+	echo "Location unknown"
 fi
