@@ -9,3 +9,33 @@
     * Deny list (default): Allow by default and block certain services
     * Allow list: Block by default and allow certain services
 * When SCPs are enabled on an organization, AWS apply a default policy called 'full AWS access' that is which is applied to the organization and all OUs
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyAllOutsideApprovedRegions",
+      "Effect": "Deny",
+      "NotAction": [
+        "cloudfront:*",
+        "globalaccelerator:*",
+        "iam:*",
+        "organizations:*",
+        "route53:*",
+        "support:*",
+        "waf:*"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": {
+          "aws:RequestedRegion": [
+            "us-east-1",
+            "us-west-2"
+          ]
+        }
+      }
+    }
+  ]
+}
+```
